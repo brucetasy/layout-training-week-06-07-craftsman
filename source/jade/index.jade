@@ -8,19 +8,31 @@ html(lang="en")
   body
     .navbar-brand.font-raleway.text-capitalize
       | Craftsman
-    h1 craftsman
+    h1.text-capitalize.font-raleway
+      //- | CRAFTsman
+      | craftsman
+    p
+      i.material-icons
+        | shopping_cart
+      i.material-icons
+        | add
+      i.material-icons
+        | remove
+      i.material-icons
+        | clear
+      i.material-icons
+        | keyboard_arrow_left
+      i.material-icons
+        | keyboard_arrow_down
+      i.material-icons
+        | keyboard_arrow_up
+      i.material-icons
+        | dehaze
+
     .btn-group(role='group', aria-label='Basic example')
       button.btn.btn-secondary(type='button') Left
       button.btn.btn-primary(type='button') Middle
       button.btn.btn-secondary(type='button') Right
-    
-    p
-      i.material-icons
-        | face
-      i.material-icons
-        | cached
-      i.material-icons
-        | accessibility
 
   script(src="../../assets/js/allVendors.js")
   script(src="../../assets/js/all.js")
