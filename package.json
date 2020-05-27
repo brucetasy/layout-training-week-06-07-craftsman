@@ -35,6 +35,7 @@
     "gulp-uglify": "^3.0.2",
     "lodash": "^4.17.15",
     "main-bower-files": "^2.13.3",
+    "material-design-icons": "^3.0.1",
     "minimist": "^1.2.0"
   }
 }

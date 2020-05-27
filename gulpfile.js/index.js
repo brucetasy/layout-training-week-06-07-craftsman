@@ -11,6 +11,12 @@ console.log(options);
 // production || develop
 // # gulp --env production
 
+gulp.task('iconfont', function () {
+  return gulp
+    .src('./node_modules/material-design-icons/iconfont/**')
+    .pipe(gulp.dest('./output/assets/iconfont'))
+});
+
 gulp.task('jade', function() {
   return gulp
     .src('./source/jade/**/!(_)*.jade') // "!(_)" 檔名前加 "_" 下底線時，檔案不處理 (多半為連結檔)
@@ -107,6 +113,7 @@ gulp.task('build',
     'clean',
     bowerTask,
     vendorJs,
+    'iconfont',
     gulp.parallel(
       'jade', 
       'sass', 
@@ -121,6 +128,7 @@ gulp.task('default',
     'clean', 
     bowerTask,
     vendorJs,
+    'iconfont',
     gulp.parallel(
       'jade', 
       'sass', 
