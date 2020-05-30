@@ -1,39 +1,26 @@
-<!DOCTYPE html>
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title craftsman
-    link(rel="stylesheet", href="../../assets/css/all.css")
-  body
-    .navbar-brand.font-raleway.text-capitalize
-      | Craftsman
-    h1.text-capitalize.font-raleway
-      //- | CRAFTsman
-      | craftsman
-    p
-      i.material-icons
-        | shopping_cart
-      i.material-icons
-        | add
-      i.material-icons
-        | remove
-      i.material-icons
-        | clear
-      i.material-icons
-        | keyboard_arrow_left
-      i.material-icons
-        | keyboard_arrow_down
-      i.material-icons
-        | keyboard_arrow_up
-      i.material-icons
-        | dehaze
+extends extends/_layoutTemplate.jade
 
-    .btn-group(role='group', aria-label='Basic example')
-      button.btn.btn-secondary(type='button') Left
-      button.btn.btn-primary(type='button') Middle
-      button.btn.btn-secondary(type='button') Right
-
-  script(src="../../assets/js/allVendors.js")
-  script(src="../../assets/js/all.js")
+block header
+  // header.container-fluid
+  header.container-fluid
+    section.row
+      article.container-fluid.c-visionCard
+        .c-visionCard__photo.c-visionCard__photo--bgImg
+        .c-visionCard__mask
+          .c-visionCard__mask__inner
+        .row
+          .container
+            .row.min-vh-100.c-visionCardContent
+              .col-xl-5.c-visionCardContent__inner
+                h1.display-1.c-visionCardContent__inner__title.mb-6
+                  | Enjoy Your Minimalist Lifestyle.
+                h2.display-2.c-visionCardContent__inner__text.mb-sm-12
+                  | The best crafts in Taiwan. Get your free shipping on the first order.
+              .col-xl-2
+                a.btn.btn-primary.d-block(href="#")
+                  | Shop now
+  // /header.container-fluid
   
+block mainInner
+  section.container-fluid
+    

@@ -5,18 +5,6 @@
 
 // Color system
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
@@ -34,16 +22,6 @@ $grays: map-merge(
   $grays
 );
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -61,12 +39,13 @@ $colors: map-merge(
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "gray-dark":  $gray-800,
+    "black":      $black  // 自訂加入
   ),
   $colors
 );
 
-$primary:       $blue !default;
+$primary:       $green !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -86,7 +65,8 @@ $theme-colors: map-merge(
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
-    "dark":       $dark
+    "dark":       $dark,
+    "black":      $black  // 自訂加入
   ),
   $theme-colors
 );
@@ -136,17 +116,31 @@ $enable-deprecation-messages:                 true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer: 1rem !default;
+$spacer: 4px !default;  //1rem !default;
 $spacers: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
-  (
+  ( 
     0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    1: ($spacer * .1),  //4px
+    2: ($spacer * 2),   //8px
+    3: ($spacer * 3),   //12px
+    4: ($spacer * 4),   //16px
+    5: ($spacer * 5),   //20px
+    6: ($spacer * 6),   //24px
+    7: ($spacer * 7),   //28px
+    8: ($spacer * 8),   //32px
+    9: ($spacer * 9),   //36px
+    10: ($spacer * 10),   //40px
+    11: ($spacer * 11),   //44px
+    12: ($spacer * 12),   //48px
+
+    // 0: 0,
+    // 1: ($spacer * .25),
+    // 2: ($spacer * .5),
+    // 3: $spacer,
+    // 4: ($spacer * 1.5),
+    // 5: ($spacer * 3)
   ),
   $spacers
 );
@@ -280,7 +274,9 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -305,21 +301,21 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      .5rem !default;  // $spacer / 2 !default
 $headings-font-family:        null !default;
 $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
-$display1-size:               6rem !default;
-$display2-size:               5.5rem !default;
+$display1-size:               48px !default;  // 6rem !default;
+$display2-size:               24px !default;  // 5.5rem !default
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight:             700 !default;  // 300 !default
+$display2-weight:             300 !default;  // 300 !default
+$display3-weight:             300 !default;  // 300 !default
+$display4-weight:             300 !default;  // 300 !default
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
@@ -347,7 +343,7 @@ $list-inline-padding:         .5rem !default;
 
 $mark-bg:                     #fcf8e3 !default;
 
-$hr-margin-y:                 $spacer !default;
+$hr-margin-y:                 0.5rem !default;  // $spacer !default;
 
 
 // Tables
@@ -389,8 +385,8 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         1.125rem !default;  //18px  // .375rem !default;
+$input-btn-padding-x:         1.5rem !default;    //24px  // .75rem !default
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;

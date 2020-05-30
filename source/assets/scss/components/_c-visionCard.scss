@@ -1,0 +1,78 @@
+.c-visionCard {
+  min-height: 100vh;
+  position: relative;
+  &__mask {
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    @include media-breakpoint-down(lg){
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl){
+      width: 50%;
+    }
+    &__inner {
+      min-height: 100vh;
+      @include media-breakpoint-down(lg){
+        background-color: rgba(0, 0, 0, 0.38);
+      }
+      @include media-breakpoint-up(xl){
+        background-color: $white;
+        margin-right: -15px;
+      }
+    }
+  }
+  &__photo {
+    position: absolute;
+    right: 0;
+    min-height: 100vh;
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 50%;
+    }
+    &--bgImg {
+      background-image: url('../../assets/img/index-main.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  &Content {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include media-breakpoint-down(sm) {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    &__inner {
+      @include media-breakpoint-down(sm) {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      @include media-breakpoint-down(lg){
+        color: $white;
+        text-align: center;
+      }
+      &__title {
+        @include media-breakpoint-down(lg){
+          font-size: 48px;
+        }
+      }
+      &__text {
+        @include media-breakpoint-down(lg){
+          font-size: 16px;
+          line-height: 24px;
+          color: rgba(255, 255, 255, 0.6);
+        };
+        @include media-breakpoint-up(xl){
+          color: $gray-600;
+        };
+      }
+    }
+  }
+}

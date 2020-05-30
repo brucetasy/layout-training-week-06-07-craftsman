@@ -1,0 +1,101 @@
+extends extends/_layoutTemplate.jade
+
+block mainInner
+  section.container-fluid.pt-10
+    .row
+      .container
+        h2 grid system
+        .row
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+          .col-sm-1
+            .bg-primary.text-white 
+              | .col-sm-1
+  section.container-fluid
+    .row
+      .container
+        hr
+        h2 material-icons
+        p
+          i.material-icons
+            | arrow_back
+          i.material-icons
+            | shopping_cart
+          i.material-icons
+            | add
+          i.material-icons
+            | remove
+          i.material-icons
+            | clear
+          i.material-icons
+            | keyboard_arrow_left
+          i.material-icons
+            | keyboard_arrow_down
+          i.material-icons
+            | keyboard_arrow_up
+          i.material-icons
+            | dehaze
+        p 
+          span.mr-2 Link To
+          a(href="https://material.io/tools/icons/?style=baseline") https://material.io/tools/icons/?style=baseline
+
+        hr
+        h2 logo
+        .row
+          .col-sm-6
+            .font-raleway.text-capitalize
+              | Craftsman
+            p 透過工具類樣式 <code>.font-raleway.text-capitalize</code> 基本組合
+          .col-sm-6
+            h2.text-capitalize.font-raleway
+              //- | CRAFTsman
+              | craftsman
+            p 工具類樣式透過標題標籤組合
+          .col-sm-6
+            .logo
+              | craftsman
+            p 使用 <code>.logo</code> 樣式
+          .col-sm-6
+            a.logo(href="#")
+              | craftsman
+            p 使用 <code>a.logo</code> 樣式
+        
+        hr
+        h2 btn
+        .row
+          .col-12
+            .btn-group(role='group', aria-label='Basic example')
+              button.btn.btn-secondary(type='button') Left
+              button.btn.btn-primary(type='button') Middle
+              button.btn.btn-secondary(type='button') Right

@@ -1,0 +1,78 @@
+.c-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include media-breakpoint-down(lg) {
+    padding: 0px;
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 24px 0px;
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+  &Link {
+    color: $white;
+    @include media-breakpoint-down(lg) {
+      padding: 12px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding: 18px;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  &__toggler {
+    @include media-breakpoint-down(lg) {
+      color: $white;
+      &:hover {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+  &__logo {
+    @include media-breakpoint-down(lg) {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      color: $black;
+      padding-top: 0;
+      padding-bottom: 0;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  &__nav{
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: auto;
+      margin-bottom: 0;
+    }
+    &__item {
+      list-style: none;
+    }
+    &Link {
+      padding: 16px 0;
+      color: $white;
+      &:hover {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+}

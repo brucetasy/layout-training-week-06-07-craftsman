@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+html(lang="zh-TW")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title craftsman
+    link(rel="stylesheet", href="assets/css/all.css")
+  body.u-overflowX-hidden
+    // block c-sidebar
+    block c-sidebar
+      .container-lg.fixed-top
+        nav.c-navbar.c-navbar-expand-lg.c-navbar-dark.bg-transparent.px-lg-0
+          a.material-icons.c-navbarLink.c-navbar__toggler.js-c-sidebarCollapse(href="#")
+            | dehaze
+          a.logo.c-navbar__logo.c-navbarLink(href="index.html")
+            | craftsman
+          ul.c-navbar__nav
+            li.c-navbar__nav__item.pl-lg-12
+              a.c-navbar__navLink(href='product.html')
+                | Product
+            li.c-navbar__nav__item.pl-lg-12
+              a.c-navbar__navLink(href='blog.html')
+                | Blog
+            li.c-navbar__nav__item.pl-lg-12
+              a.c-navbar__navLink(href='contact.html')
+                | Contact
+          a.material-icons.c-navbarLink.pl-lg-12(href='cart.html') 
+            | shopping_cart
+      // c-sidebar
+      nav.c-sidebar.js-c-sidebar.bg-white.d-xl-none
+        .c-sidebar__header.mb-8
+          a.material-icons.c-sidebarIcon.text-black.text-decoration-none.js-dismiss(href="#")
+            | arrow_back
+          a.material-icons.c-sidebarIcon.text-black.text-decoration-none(href="cart.html")
+            | shopping_cart
+        ul.c-sidebarList
+          li.active
+            h3.c-sidebarListTitle.pb-4.mb-4(href='#submenuOne', data-toggle='collapse', aria-expanded='false')
+              a.c-sidebarListLink(href="#") 
+                | Product
+              a.material-icons.c-sidebarIcon.c-sidebarListLink(href='#submenuOne', data-toggle='collapse', aria-expanded='false')
+                | keyboard_arrow_down
+            ul#submenuOne.collapse.c-sidebarList__submenu.border-bottom.border-light.mb-4
+              li.mb-4
+                a.c-sidebarList__submenuLink(href='product.html')
+                  | ALL<sup>24</sup>
+              li.mb-4
+                a.c-sidebarList__submenuLink(href='product.html')
+                  | CUP<sup>8</sup>
+              li.mb-4
+                a.c-sidebarList__submenuLink(href='product.html')
+                  | BOWL<sup>10</sup>
+              li.mb-4
+                a.c-sidebarList__submenuLink(href='product.html')
+                  | PLATE<sup>3</sup>
+              li.mb-4
+                a.c-sidebarList__submenuLink(href='product.html')
+                  | VASE<sup>3</sup>
+          li
+            h3.c-sidebarListTitle.pb-4.mb-4
+              a.c-sidebarListLink(href="#") 
+                | Blog
+          li
+            h3.c-sidebarListTitle.pb-4.mb-4
+              a.c-sidebarListLink(href="#") 
+                | Contact
+      .c-sidebarOverlay.d-xl-none
+    // /block c-sidebar
+
+    // block header
+    block header
+    // /block header
+
+    main.container-fluid
+      .row
+        // block mainInner
+        block mainInner
+        // /block mainInner
+
+    // block globalScripts
+    block globalScripts
+      script(src='assets/js/allVendors.js?#{new Date().getTime()}')
+      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js?#{new Date().getTime()}')
+      script(src='assets/js/all.js?#{new Date().getTime()}')
+    // /block globalScripts
