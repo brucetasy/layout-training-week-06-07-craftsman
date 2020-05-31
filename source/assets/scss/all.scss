@@ -91,6 +91,18 @@
 @import "components/c-fixedScrollableSidebar";
 @import "components/c-staggerList";
 @import "components/c-footerForm";
+.c-author {
+  min-height: 400px;
+  // @include media-breakpoint-down(lg) {
+    
+  // }
+  // @include media-breakpoint-up(xl) {
+  //   min-height: 400px;
+  // }
+  &--bgImg {
+    @include retina('../../assets/img/artDirector.jpg', 2, cover, center center no-repeat)
+  }
+}
 /* End of components
 -------------------------------------------------- */
 
@@ -108,6 +120,17 @@
 }
 .u-overflowX-hidden {
   overflow-x: hidden;
+}
+.u-lineHeight {
+  &-150 {
+    line-height: 1.5;
+  }
+  &-130 {
+    line-height: 1.3;
+  }
+  &-100 {
+    line-height: 1;
+  }
 }
 /* End of utilities
 -------------------------------------------------- */
