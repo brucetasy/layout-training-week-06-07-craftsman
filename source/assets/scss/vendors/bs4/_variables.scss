@@ -38,6 +38,7 @@ $colors: map-merge(
     "teal":       $teal,
     "cyan":       $cyan,
     "white":      $white,
+    "whiteTranslucent":      $whiteTranslucent,   // 自訂加入
     "gray":       $gray-600,
     "gray-dark":  $gray-800,
     "black":      $black  // 自訂加入
@@ -66,6 +67,7 @@ $theme-colors: map-merge(
     "danger":     $danger,
     "light":      $light,
     "dark":       $dark,
+    "whiteTranslucent":      $whiteTranslucent,   // 自訂加入
     "black":      $black  // 自訂加入
   ),
   $theme-colors
@@ -134,6 +136,15 @@ $spacers: map-merge(
     10: ($spacer * 10),   //40px
     11: ($spacer * 11),   //44px
     12: ($spacer * 12),   //48px
+    13: ($spacer * 13),   //52px
+    14: ($spacer * 14),   //56px
+    15: ($spacer * 15),   //60px
+    16: ($spacer * 16),   //64px
+    17: ($spacer * 17),   //68px
+    18: ($spacer * 18),   //72px
+    19: ($spacer * 19),   //76px
+    20: ($spacer * 20),   //80px
+    21: ($spacer * 21),   //84px
 
     // 0: 0,
     // 1: ($spacer * .25),
@@ -321,7 +332,7 @@ $display-line-height:         $headings-line-height !default;
 $lead-font-size:              $font-size-base * 1.25 !default;
 $lead-font-weight:            300 !default;
 
-$small-font-size:             80% !default;
+$small-font-size:             .875rem !default;  // 80% !default;
 
 $text-muted:                  $gray-600 !default;
 
@@ -471,10 +482,10 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
-$input-bg:                              $white !default;
+$input-bg:                              transparent !default;  //$white !default;
 $input-disabled-bg:                     $gray-200 !default;
 
-$input-color:                           $gray-700 !default;
+$input-color:                           $black !default;  // $gray-700 !default;
 $input-border-color:                    $gray-400 !default;
 $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
@@ -483,13 +494,13 @@ $input-border-radius:                   $border-radius !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 $input-border-radius-sm:                $border-radius-sm !default;
 
-$input-focus-bg:                        $input-bg !default;
+$input-focus-bg:                        $white !default; // $input-bg !default;
 $input-focus-border-color:              lighten($component-active-bg, 25%) !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
 $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color:               $gray-600 !default;
+$input-placeholder-color:               $whiteTranslucent !default;  // $gray-600 !default;
 $input-plaintext-color:                 $body-color !default;
 
 $input-height-border:                   $input-border-width * 2 !default;

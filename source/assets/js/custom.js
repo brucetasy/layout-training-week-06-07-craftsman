@@ -14,16 +14,18 @@ $(function () {
 
   /* Fixed scrollable c-sidebar menu with a content overlay
   -------------------------------------------------- */
-  $('.js-dismiss, .c-sidebarOverlay').on('click', function () {
+  $('.js-dismiss, .c-sidebarOverlay').on('click', function (e) {
     console.log('js-dismiss, .overlay click');
+    e.preventDefault();
     // hide c-sidebar
     $('.js-c-sidebar').removeClass('js-active');
     // hide c-sidebarOverlay
     $('.c-sidebarOverlay').removeClass('js-active');
   });
 
-  $('.js-c-sidebarCollapse').on('click', function () {
+  $('.js-c-sidebarCollapse').on('click', function (e) {
     console.log('.js-c-sidebarCollapse click');
+    e.preventDefault();
     // open c-sidebar
     $('.js-c-sidebar').addClass('js-active');
     // fade in the c-sidebarOverlay

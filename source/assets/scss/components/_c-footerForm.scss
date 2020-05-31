@@ -1,0 +1,11 @@
+.c-footerForm {
+  &--bgImg {
+    @include retina('../../assets/img/subscribe-bgImg.jpg', 2, cover, center right no-repeat)
+  }
+  &Title {
+    @include media-breakpoint-down(lg) {
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+}

@@ -77,9 +77,40 @@ html(lang="zh-TW")
         block mainInner
         // /block mainInner
 
+    footer.container-fluid
+      .row
+        .container-fluid.bg-secondary.py-6.py-md-21.c-footerForm--bgImg
+          .row
+            .container
+              .row
+                .col-12.col-lg-5.c-footerForm
+                  .display-1.text-white.c-footerFormTitle.mb-6.mb-md-12
+                    | Subscribe for news and special offers!
+                  .input-group
+                    input.form-control(type="email", placeholder="Your email address", aria-describedby="footerFormEmailBtn")
+                    .input-group-append#footerFormEmailBtn
+                      button.btn.btn-primary.px-md-11 Subscribe
+        .container-fluid.bg-black
+          .row
+            .container
+              .row
+                .col-12.d-flex.flex-column.flex-lg-row.align-items-lg-center.py-6.py-lg-8
+                  a.logo.text-white.mr-4(href="index.html")
+                    | craftsman
+                  span.text-whiteTranslucent.order-1 © 2020. All Rights Reserved.
+                  ul.list-unstyled.d-lg-flex.order-lg-1.ml-lg-auto.my-10.my-lg-0
+                    li
+                      a.text-white.d-inline-block.py-2.ml-lg-18(href="#", title="Purchase Policy") 
+                        span.small Purchase Policy
+                    li
+                      a.text-white.d-inline-block.py-2.ml-lg-18(href="#", title="Privacy Policy") 
+                        span.small Privacy Policy
+                    li
+                      a.text-white.d-inline-block.py-2.ml-lg-18(href="#", title="Terms & Conditions") 
+                        span.small Terms & Conditions
+
     // block globalScripts
     block globalScripts
       script(src='assets/js/allVendors.js?#{new Date().getTime()}')
-      //- script(src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js?#{new Date().getTime()}')
       script(src='assets/js/all.js?#{new Date().getTime()}')
     // /block globalScripts

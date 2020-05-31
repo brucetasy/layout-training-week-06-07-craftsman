@@ -1,7 +1,7 @@
 extends extends/_layoutTemplate.jade
 
 block mainInner
-  section.container-fluid.pt-10
+  section.container-fluid.pt-md-12.mt-md-12
     .row
       .container
         h2 grid system
@@ -47,7 +47,7 @@ block mainInner
       .container
         hr
         h2 material-icons
-        p
+        p.mb-0
           i.material-icons
             | arrow_back
           i.material-icons
@@ -66,7 +66,7 @@ block mainInner
             | keyboard_arrow_up
           i.material-icons
             | dehaze
-        p 
+        p.mb-0
           span.mr-2 Link To
           a(href="https://material.io/tools/icons/?style=baseline") https://material.io/tools/icons/?style=baseline
 
@@ -91,6 +91,48 @@ block mainInner
               | craftsman
             p 使用 <code>a.logo</code> 樣式
         
+        hr
+        h2 typography (段落與標題)
+        .row
+          .col-md-6
+            .display-1
+              | 這是 <code>.display-1</code> 
+              span.h6 (font-size: 48px)
+          .col-md-6
+            .display-2
+              | 這是 <code>.display-2</code> 
+              span.h6 (font-size: 24px)
+        .row
+          .col-md-3
+            h1 這是 <code>h1</code>
+          .col-md-3
+            .h1 這是 <code>.h1</code>
+          .col-md-3
+            h2 這是 <code>h2</code>
+          .col-md-3
+            .h2 這是 <code>.h2</code>
+          .col-md-3
+            h3 這是 <code>h3</code>
+          .col-md-3
+            .h3 這是 <code>.h3</code>
+          .col-md-3
+            h4 這是 <code>h4</code>
+          .col-md-3
+            .h4 這是 <code>.h4</code>
+          .col-md-3
+            h5 這是 <code>h5</code>
+          .col-md-3
+            .h5 這是 <code>.h5</code>
+          .col-md-3
+            h6 這是 <code>h6</code>
+          .col-md-3
+            .h6 這是 <code>.h6</code>
+        .row
+          .col-md-3
+            small 這是 <code>small</code> (14px)
+          .col-md-3
+            .small 這是 <code>.small</code> (14px)
+
         hr
         h2 btn
         .row

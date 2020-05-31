@@ -33,10 +33,11 @@
       width: 50%;
     }
     &--bgImg {
-      background-image: url('../../assets/img/index-main.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
+      // background-image: url('../../assets/img/index-main.jpg');
+      // background-size: cover;
+      // background-position: center center;
+      // background-repeat: no-repeat;
+      @include retina('../../assets/img/index-main.jpg', 2, cover, center center no-repeat)
     }
   }
 
@@ -46,7 +47,7 @@
     flex-direction: column;
     justify-content: center;
     @include media-breakpoint-down(sm) {
-      padding-top: 24px;
+      padding-top: 90px;
       padding-bottom: 24px;
     }
     &__inner {
