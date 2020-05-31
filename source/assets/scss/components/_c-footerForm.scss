@@ -1,4 +1,7 @@
 .c-footerForm {
+  @include media-breakpoint-up(lg) {
+    min-height: 400px;
+  }
   &--bgImg {
     @include retina('../../assets/img/subscribe-bgImg.jpg', 2, cover, center right no-repeat)
   }

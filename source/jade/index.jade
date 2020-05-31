@@ -22,6 +22,7 @@ block header
   // /header.container-fluid
   
 block mainInner
+  // .c-staggerList
   section.container-fluid
     article.row
       ul.container.c-staggerList.mb-12.mb-md-18
@@ -52,7 +53,9 @@ block mainInner
             p.c-staggerListContent__text.text-secondary
               | In <span class="font-italic">Craftsman</span>, the art director, working with marketers, develops or creates an idea of a new creation.
             a.font-weight-bold.text-capitalize(href="product.html") learn more
-  section.container-fluid.bg-black.c-author.c-author--bgImg
+  // /.c-staggerList
+  // .c-author
+  section.container-fluid.bg-black.c-author.c-author--bgImg.h-50vh
     article.row.h-100
       .container.h-100
         .row.h-100.pt-6.pb-2.d-flex.flex-column.flex-lg-row.justify-content-between.align-items-center
@@ -69,3 +72,4 @@ block mainInner
                 a.small.d-inline-block.font-weight-bold.py-4(href="#") Instagram
               li.list-inline-item
                 a.small.d-inline-block.font-weight-bold.py-4(href="#") Twitter
+  // /.c-author

@@ -71,19 +71,22 @@ html(lang="zh-TW")
     block header
     // /block header
 
+    // main.container-fluid
     main.container-fluid
       .row
         // block mainInner
         block mainInner
         // /block mainInner
+    // /main.container-fluid
 
+    // footer.container-fluid
     footer.container-fluid
       .row
-        .container-fluid.bg-secondary.py-6.py-md-21.c-footerForm.c-footerForm--bgImg
-          .row
-            .container
-              .row
-                .col-12.col-lg-5
+        .container-fluid.c-footerForm.c-footerForm--bgImg.py-6.py-md-21.h-50vh
+          .row.h-100
+            .container.h-100
+              .row.h-100
+                .col-12.col-lg-5.d-flex.flex-column.justify-content-center
                   .display-1.text-white.c-footerFormTitle.mb-6.mb-md-12
                     | Subscribe for news and special offers!
                   .input-group
@@ -108,6 +111,7 @@ html(lang="zh-TW")
                     li
                       a.text-white.d-inline-block.py-2.ml-lg-18(href="#", title="Terms & Conditions") 
                         span.small Terms & Conditions
+    // /footer.container-fluid
 
     // block globalScripts
     block globalScripts
