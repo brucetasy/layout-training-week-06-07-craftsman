@@ -1,3 +1,7 @@
+.c-nav {
+  background-color: $white;
+}
+
 .c-navbar {
   display: flex;
   align-items: center;
@@ -8,29 +12,45 @@
     margin-right: -12px;
   }
   @include media-breakpoint-up(xl) {
-    padding: 24px 0px;
+    // padding: 24px 0px;
     margin-left: -18px;
     margin-right: -18px;
   }
   &Link {
-    color: $white;
-    @include media-breakpoint-down(lg) {
-      padding: 12px;
-    }
-    @include media-breakpoint-up(xl) {
-      padding: 0px 18px;
-    }
+    color: $black;
     &:hover {
       text-decoration: none;
+      color: $black;
+    }
+    padding: 12px;
+    // @include media-breakpoint-down(lg) {
+    // }
+    // @include media-breakpoint-up(xl) {
+    //   padding: 0px 18px;
+    // }
+    &--index {
       color: $white;
+      &:hover {
+        // text-decoration: none;
+        color: $white;
+      }
     }
   }
   &__toggler {
     @include media-breakpoint-down(lg) {
-      color: $white;
+      color: $black;
       &:hover {
         text-decoration: none;
+        color: $black;
+      }
+    }
+    &--index {
+      @include media-breakpoint-down(lg) {
         color: $white;
+        &:hover {
+          text-decoration: none;
+          color: $white;
+        }
       }
     }
     @include media-breakpoint-up(xl) {
@@ -38,27 +58,29 @@
     }
   }
   &__logo {
-    @include media-breakpoint-down(lg) {
-      color: $white;
-      &:hover {
-        color: $white;
-      }
-    }
-    @include media-breakpoint-up(xl) {
+    color: $black;
+    &:hover {
       color: $black;
-      padding-top: 0;
-      padding-bottom: 0;
-      &:hover {
-        color: $black;
-      }
     }
+    // @include media-breakpoint-up(xl) {
+    //   padding-top: 0;
+    //   padding-bottom: 0;
+    // }
+    // &--index {
+    //   @include media-breakpoint-down(lg) {
+    //     color: $white;
+    //     &:hover {
+    //       color: $white;
+    //     }
+    //   }
+    // }
   }
-  &__nav{
+  &NavMenu{
     display: flex;
     align-items: center;
-    @include media-breakpoint-down(lg) {
-      display: none;
-    }
+    // @include media-breakpoint-down(lg) {
+    //   display: none;
+    // }
     @include media-breakpoint-up(xl) {
       margin-left: auto;
       margin-bottom: 0;
@@ -70,11 +92,56 @@
       @include media-breakpoint-down(lg) {
         padding: 16px 0;
       }
-      color: $white;
-      &:hover {
+      &--white {
         color: $white;
-        text-decoration: none;
+        &:hover {
+          color: $white;
+          text-decoration: none;
+        }
       }
     }
   }
+}
+
+
+.c-visionNav {
+  background-color: transparent;
+  transition: all .3s;
+  .c-navbar {
+    &Link {
+      @include media-breakpoint-down(lg) {
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    &NavMenu {
+      .c-navbarLink {
+        @include media-breakpoint-up(xl) {
+          color: $white;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+    &IconLink {
+      @include media-breakpoint-up(xl) {
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    &__logo {
+      @include media-breakpoint-down(lg) {
+        color: $white;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  
 }

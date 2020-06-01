@@ -3,10 +3,15 @@ console.log('js all');
 $(function () {
   console.log('jquery run');
   
-  var winHeight = $(window).height();
-  console.log('winHeight', winHeight);
+  // var winHeight = $(window).height();
+  // console.log('winHeight', winHeight);
   $(window).scroll(function () {
-    console.log('$(this).scrollTop()', $(this).scrollTop());
+    // console.log('$(this).scrollTop()', $(this).scrollTop());
+    if ($(this).scrollTop() > 80) {
+      $('.js-c-visionNav').removeClass('c-visionNav');
+    } else {
+      $('.js-c-visionNav').addClass('c-visionNav');
+    }
   });
 
   /* Fixed scrollable c-sidebar menu with a content overlay

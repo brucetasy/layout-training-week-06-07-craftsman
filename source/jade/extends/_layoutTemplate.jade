@@ -8,26 +8,29 @@ html(lang="zh-TW")
   body.u-overflowX-hidden
     // block c-sidebar
     block c-sidebar
-    .container-fluid.fixed-top
+    .container-fluid.fixed-top.c-nav.c-visionNav.js-c-visionNav
       .row
-        .container-lg
-          nav.c-navbar.c-navbar-expand-lg.c-navbar-dark.bg-transparent.px-lg-0
+        .container-xl
+          nav.c-navbar.px-xl-0.py-xl-3
             a.material-icons.c-navbarLink.c-navbar__toggler.js-c-sidebarCollapse(href="#")
               | dehaze
             a.logo.c-navbar__logo.c-navbarLink(href="index.html")
               | craftsman
-            ul.c-navbar__nav
-              li.c-navbar__nav__item.pl-lg-12
-                a.c-navbar__navLink(href='product.html')
-                  | Product
-              li.c-navbar__nav__item.pl-lg-12
-                a.c-navbar__navLink(href='blog.html')
-                  | Blog
-              li.c-navbar__nav__item.pl-lg-12
-                a.c-navbar__navLink(href='contact.html')
-                  | Contact
-            a.material-icons.c-navbarLink.pl-lg-12(href='cart.html') 
-              | shopping_cart
+            ul.list-inline.d-flex.mb-0
+              li.list-inline-item.d-none.d-xl-flex.mr-xl-6
+                ul.list-inline.c-navbarNavMenu.mb-0
+                  li.list-inline-item.c-navbarNavMenu__item.mr-xl-6
+                    a.c-navbarLink(href='product.html')
+                      | Product
+                  li.list-inline-item.c-navbarNavMenu__item.mr-xl-6
+                    a.c-navbarLink(href='blog.html')
+                      | Blog
+                  li.list-inline-item.c-navbarNavMenu__item
+                    a.c-navbarLink(href='contact.html')
+                      | Contact
+              li.list-inline-item.d-flex
+                a.material-icons.c-navbarLink.c-navbarIconLink(href='cart.html') 
+                  | shopping_cart
         // c-sidebar
       nav.c-sidebar.js-c-sidebar.bg-white.d-xl-none
         .c-sidebar__header.mb-8
