@@ -8,25 +8,27 @@ html(lang="zh-TW")
   body.u-overflowX-hidden
     // block c-sidebar
     block c-sidebar
-      .container-lg.fixed-top
-        nav.c-navbar.c-navbar-expand-lg.c-navbar-dark.bg-transparent.px-lg-0
-          a.material-icons.c-navbarLink.c-navbar__toggler.js-c-sidebarCollapse(href="#")
-            | dehaze
-          a.logo.c-navbar__logo.c-navbarLink(href="index.html")
-            | craftsman
-          ul.c-navbar__nav
-            li.c-navbar__nav__item.pl-lg-12
-              a.c-navbar__navLink(href='product.html')
-                | Product
-            li.c-navbar__nav__item.pl-lg-12
-              a.c-navbar__navLink(href='blog.html')
-                | Blog
-            li.c-navbar__nav__item.pl-lg-12
-              a.c-navbar__navLink(href='contact.html')
-                | Contact
-          a.material-icons.c-navbarLink.pl-lg-12(href='cart.html') 
-            | shopping_cart
-      // c-sidebar
+    .container-fluid.fixed-top
+      .row
+        .container-lg
+          nav.c-navbar.c-navbar-expand-lg.c-navbar-dark.bg-transparent.px-lg-0
+            a.material-icons.c-navbarLink.c-navbar__toggler.js-c-sidebarCollapse(href="#")
+              | dehaze
+            a.logo.c-navbar__logo.c-navbarLink(href="index.html")
+              | craftsman
+            ul.c-navbar__nav
+              li.c-navbar__nav__item.pl-lg-12
+                a.c-navbar__navLink(href='product.html')
+                  | Product
+              li.c-navbar__nav__item.pl-lg-12
+                a.c-navbar__navLink(href='blog.html')
+                  | Blog
+              li.c-navbar__nav__item.pl-lg-12
+                a.c-navbar__navLink(href='contact.html')
+                  | Contact
+            a.material-icons.c-navbarLink.pl-lg-12(href='cart.html') 
+              | shopping_cart
+        // c-sidebar
       nav.c-sidebar.js-c-sidebar.bg-white.d-xl-none
         .c-sidebar__header.mb-8
           a.material-icons.c-sidebarIcon.text-black.text-decoration-none.js-dismiss(href="#")

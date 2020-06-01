@@ -18,7 +18,7 @@
       padding: 12px;
     }
     @include media-breakpoint-up(xl) {
-      padding: 18px;
+      padding: 0px 18px;
     }
     &:hover {
       text-decoration: none;
@@ -67,7 +67,9 @@
       list-style: none;
     }
     &Link {
-      padding: 16px 0;
+      @include media-breakpoint-down(lg) {
+        padding: 16px 0;
+      }
       color: $white;
       &:hover {
         color: $white;
