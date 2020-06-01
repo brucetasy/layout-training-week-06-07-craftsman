@@ -35,6 +35,20 @@ $(function () {
   });
   /* End of Fixed scrollable c-sidebar menu with a content overlay
   -------------------------------------------------- */
+
+
+  var mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    spaceBetween: 16, // 全域設定
+    breakpoints: {
+      1200: { // 斷點 xl 時的間隔
+        spaceBetween: 30,
+      },
+      // 768: {
+      //   spaceBetween: 16,
+      // }
+    },
+  })
 })
 
 

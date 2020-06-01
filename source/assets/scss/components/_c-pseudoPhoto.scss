@@ -1,0 +1,58 @@
+.c-pseudoPhoto {
+  content: "";
+  display: block;
+  width: 100%;
+  border-radius: 2px;
+
+  
+  /*----------  box-size  ----------*/
+  &-100p{
+    // 正方
+    padding-top: 100%;
+  }
+  &-68p {
+    // 240/350=0.6857142857
+    padding-top: 68.57142%;
+  }
+  &-74p{
+    padding-top: 74.0740%;
+  }
+  &-114p{
+    // 400/350 = 1.1428571429
+    padding-top: 114.2857%;
+  }
+  /*----------  /box-size  ----------*/
+
+  /*----------  bgImg-photos  ----------*/
+  &--TatamiCup {
+    @include retina('../../assets/img/product/Product-TatamiCup.jpg', 3, cover, center center no-repeat)
+  }
+  &--BaifanBowl {
+    @include retina('../../assets/img/product/Product-BaifanBowl.jpg', 3, cover, center center no-repeat)
+  }
+  &--CeramicVase {
+    @include retina('../../assets/img/product/Product-CeramicVase.jpg', 3, cover, center center no-repeat)
+  }
+  &--CoupleCollection {
+    @include retina('../../assets/img/product/Product-CoupleCollection.jpg', 3, cover, center center no-repeat)
+  }
+  &--HanaVase {
+    @include retina('../../assets/img/product/Product-HanaVase.jpg', 3, cover, center center no-repeat)
+  }
+  &--KabiMug {
+    @include retina('../../assets/img/product/Product-KabiMug.jpg', 3, cover, center center no-repeat)
+  }
+  &--LimdaeCup {
+    @include retina('../../assets/img/product/Product-LimdaeCup.jpg', 3, cover, center center no-repeat)
+  }
+  &--ShiroPlate {
+    @include retina('../../assets/img/product/Product-ShiroPlate.jpg', 3, cover, center center no-repeat)
+  }
+  &--SumoVase {
+    @include retina('../../assets/img/product/Product-SumoVase.jpg', 3, cover, center center no-repeat)
+  }
+  &--CoupleCollection {
+    @include retina('../../assets/img/product/Product-CoupleCollection.jpg', 3, cover, center center no-repeat)
+  }
+  /*----------  /bgImg-photos  ----------*/
+}

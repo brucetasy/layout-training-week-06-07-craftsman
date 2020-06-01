@@ -7,13 +7,16 @@
 
 /* mixin
 -------------------------------------------------- */
-@import 'methods/mixin/bgImg-retina';
+@import 'mixin/bgImg-retina';
 /* End of mixin
 -------------------------------------------------- */
 
 
 /* vendors
 -------------------------------------------------- */
+
+
+/*----------  bootstrap 4  ----------*/
 @import "helper/colorsVar";
 // @import "vendors/bs4/bootstrap";
 
@@ -60,16 +63,35 @@
 @import "../../../node_modules/bootstrap/scss/spinners";
 @import "../../../node_modules/bootstrap/scss/utilities";
 // @import "vendors/bs4/utilities/sizing-custom";
+/*----------  /bootstrap 4  ----------*/
+
+/*----------  swiper  ----------*/
+@import "../../../node_modules/swiper/swiper.scss";
+/*----------  swiper  ----------*/
+
 /* End of vendors
 -------------------------------------------------- */
-
-
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  // align-items: center;
+  // justify-content: center;
+  @include media-breakpoint-down(lg) {
+    max-width: 300px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 350px;
+  }
+}
 
 /* base
 -------------------------------------------------- */
-// body {
-//   background-color: $primaryColor;
-// }
+@import "base/logo";
 /* End of base
 -------------------------------------------------- */
 
@@ -77,34 +99,19 @@
 
 /* components
 -------------------------------------------------- */
-.logo {
-  font-family: 'Raleway', sans-serif;
-  text-transform: capitalize;
-  font-size: 24px;
-  line-height: 29px;
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-// index & checkout-3 page use
-@import "components/c-visionCard";
+// layout
 @import "components/c-navbar";
 @import "components/c-fixedScrollableSidebar";
-@import "components/c-staggerList";
 @import "components/c-footerForm";
-.c-author {
-  min-height: 400px;
-  // @include media-breakpoint-down(lg) {
-    
-  // }
-  // @include media-breakpoint-up(xl) {
-  //   min-height: 400px;
-  // }
-  &--bgImg {
-    @include retina('../../assets/img/artDirector.jpg', 2, cover, center center no-repeat)
-  }
-}
+// /layout
+// index & checkout-3 page use
+@import "components/c-visionCard";
+@import "components/c-author";
+// /index & checkout-3 page use
+
+@import "components/c-staggerList";
+@import "components/c-pseudoPhoto";
+
 /* End of components
 -------------------------------------------------- */
 
@@ -112,27 +119,6 @@
 
 /* utilities
 -------------------------------------------------- */
-.u-position {
-  &-left {
-    left: 0;
-  }
-  &-right {
-    right: 0;
-  }
-}
-.u-overflowX-hidden {
-  overflow-x: hidden;
-}
-.u-lineHeight {
-  &-150 {
-    line-height: 1.5;
-  }
-  &-130 {
-    line-height: 1.3;
-  }
-  &-100 {
-    line-height: 1;
-  }
-}
+@import "utilities/u-custom";
 /* End of utilities
 -------------------------------------------------- */

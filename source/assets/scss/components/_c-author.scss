@@ -1,0 +1,6 @@
+.c-author {
+  min-height: 400px;
+  &--bgImg {
+    @include retina('../../assets/img/artDirector.jpg', 2, cover, center center no-repeat)
+  }
+}
