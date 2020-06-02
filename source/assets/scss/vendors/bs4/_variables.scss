@@ -53,6 +53,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
+$lightGray:     $gray-200 !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
@@ -66,6 +67,7 @@ $theme-colors: map-merge(
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
+    "lightGray":      $lightGray,
     "dark":       $dark,
     "whiteTranslucent":      $whiteTranslucent,   // 自訂加入
     "black":      $black  // 自訂加入
@@ -124,7 +126,7 @@ $spacers: () !default;
 $spacers: map-merge(
   ( 
     0: 0,
-    1: ($spacer * .1),  //4px
+    1: ($spacer * 1),  //4px
     2: ($spacer * 2),   //8px
     3: ($spacer * 3),   //12px
     4: ($spacer * 4),   //16px
@@ -294,7 +296,7 @@ $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-lg:                $font-size-base * 1.5 !default;  // $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
 $font-weight-lighter:         lighter !default;
@@ -808,28 +810,28 @@ $dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x
 
 // Pagination
 
-$pagination-padding-y:              .5rem !default;
-$pagination-padding-x:              .75rem !default;
+$pagination-padding-y:              .25rem !default;  // .5rem !default;
+$pagination-padding-x:              1rem !default;  // .75rem !default;
 $pagination-padding-y-sm:           .25rem !default;
 $pagination-padding-x-sm:           .5rem !default;
 $pagination-padding-y-lg:           .75rem !default;
 $pagination-padding-x-lg:           1.5rem !default;
 $pagination-line-height:            1.25 !default;
 
-$pagination-color:                  $link-color !default;
+$pagination-color:                  $black !default;  // $link-color !default;
 $pagination-bg:                     $white !default;
 $pagination-border-width:           $border-width !default;
-$pagination-border-color:           $gray-300 !default;
+$pagination-border-color:           transparent !default;  // $gray-300 !default;
 
 $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 $pagination-focus-outline:          0 !default;
 
 $pagination-hover-color:            $link-hover-color !default;
-$pagination-hover-bg:               $gray-200 !default;
-$pagination-hover-border-color:     $gray-300 !default;
+$pagination-hover-bg:               $gray-100 !default;  // $gray-200 !default;
+$pagination-hover-border-color:     $gray-100 !default;  // $gray-300 !default;
 
-$pagination-active-color:           $component-active-color !default;
-$pagination-active-bg:              $component-active-bg !default;
+$pagination-active-color:           $primary !default;  // $component-active-color !default;
+$pagination-active-bg:              $white !default;  // $component-active-bg !default;
 $pagination-active-border-color:    $pagination-active-bg !default;
 
 $pagination-disabled-color:         $gray-600 !default;

@@ -1,0 +1,17 @@
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  // align-items: center;
+  // justify-content: center;
+  @include media-breakpoint-down(lg) {
+    max-width: 300px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 350px;
+  }
+}

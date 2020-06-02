@@ -1,11 +1,16 @@
 extends extends/_layoutTemplate.jade
 
+block nav
+  - var path = 'index.html'
+  include ./components/nav/_c-nav.jade
+  include ./components/nav/_c-sidebar.jade
+
 block header
   // header.container-fluid
   header.container-fluid
     section.row
-      article.container-fluid.c-visionCard.mb-12.mb-lgmd-18
-        .c-visionCard__photo.c-visionCard__photo--bgImg
+      article.container-fluid.c-visionCard.mb-12.mb-lg-18
+        .c-visionCard__photo.c-visionCard__photo--indexMain
         .c-visionCard__mask
           .c-visionCard__mask__inner
         .row
@@ -55,7 +60,7 @@ block mainInner
             a.font-weight-bold.text-capitalize(href="product.html") learn more
   // /.c-staggerList
   // .c-author
-  section.container-fluid.bg-black.c-author.c-author--bgImg.h-50vh
+  section.container-fluid.bg-black.c-author.c-author--bgImg.h-50vh.mb-12.mb-lg-18
     article.row.h-100
       .container.h-100
         .row.h-100.pt-6.pb-2.d-flex.flex-column.flex-lg-row.justify-content-between.align-items-center
@@ -76,3 +81,6 @@ block mainInner
   // c-productSlideShow.jade
   include ./components/_c-productSlideShow.jade
   // /c-productSlideShow.jade
+
+block footer
+  include ./components/_c-footer.jade

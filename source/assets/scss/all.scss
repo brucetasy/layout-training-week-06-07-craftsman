@@ -45,8 +45,8 @@
 @import "../../../node_modules/bootstrap/scss/navbar";
 @import "../../../node_modules/bootstrap/scss/card";
 @import "../../../node_modules/bootstrap/scss/breadcrumb";
-@import "../../../node_modules/bootstrap/scss/pagination";
-// @import "vendors/bs4/_pagination.scss";
+// @import "../../../node_modules/bootstrap/scss/pagination";
+@import "vendors/bs4/pagination";
 @import "../../../node_modules/bootstrap/scss/badge";
 // @import "../../../node_modules/bootstrap/scss/jumbotron";
 @import "../../../node_modules/bootstrap/scss/alert";
@@ -67,32 +67,36 @@
 
 /*----------  swiper  ----------*/
 @import "../../../node_modules/swiper/swiper.scss";
+@import "vendors/swiper/custom";
 /*----------  swiper  ----------*/
 
 /* End of vendors
 -------------------------------------------------- */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  // align-items: center;
-  // justify-content: center;
-  @include media-breakpoint-down(lg) {
-    max-width: 300px;
-  }
-  @include media-breakpoint-up(xl) {
-    max-width: 350px;
-  }
-}
+
 
 /* base
 -------------------------------------------------- */
 @import "base/logo";
 /* End of base
+-------------------------------------------------- */
+
+
+/* page
+-------------------------------------------------- */
+.p-fixedNavSectionFirst {
+  @include media-breakpoint-down(lg) {
+    margin-top: 53px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 77px;
+  }
+}
+.p-productSubMenu {
+  @include media-breakpoint-up(xl) {
+    font-size: 24px;
+  }
+}
+/* End of page
 -------------------------------------------------- */
 
 

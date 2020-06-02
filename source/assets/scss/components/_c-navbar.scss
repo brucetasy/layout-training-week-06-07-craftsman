@@ -13,8 +13,8 @@
   }
   @include media-breakpoint-up(xl) {
     // padding: 24px 0px;
-    margin-left: -18px;
-    margin-right: -18px;
+    margin-left: -12px;
+    margin-right: -12px;
   }
   &Link {
     color: $black;
@@ -28,6 +28,12 @@
     // @include media-breakpoint-up(xl) {
     //   padding: 0px 18px;
     // }
+    &.active {
+      color: $primary;
+      &:hover {
+        color: $black;
+      }
+    }
     &--index {
       color: $white;
       &:hover {

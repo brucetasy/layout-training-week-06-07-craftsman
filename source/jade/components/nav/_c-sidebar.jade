@@ -1,0 +1,69 @@
+// c-sidebar
+nav.c-sidebar.js-c-sidebar.bg-white.d-xl-none
+  .c-sidebar__header.mb-8
+    a.material-icons.c-sidebarIcon.text-black.text-decoration-none.js-dismiss(href="#")
+      | arrow_back
+    a.material-icons.c-sidebarIcon.text-black.text-decoration-none(href="cart.html")
+      | shopping_cart
+  ul.c-sidebarList
+    mixin sidebarSubMenuLink(name, url, num)
+      li.mb-4
+        a.c-sidebarList__submenuLink(href='#{url}')
+          | #{name}<sup>#{num}</sup>
+    mixin sidebarMenuLink(url, name)
+      if (url === "product.html")
+        li
+          h3.c-sidebarListTitle.pb-4.mb-4(href='#submenuOne', data-toggle='collapse', aria-expanded='false')
+            a.c-sidebarListLink(href="#") 
+              | Product
+            a.material-icons.c-sidebarIcon.c-sidebarListLink(href='#submenuOne', data-toggle='collapse', aria-expanded='false')
+              | keyboard_arrow_down
+          ul#submenuOne.collapse.c-sidebarList__submenu.border-bottom.border-light.mb-4
+
+            // mixin sidebarSubMenuLink(name, url, num)
+            each item in productData.list
+              +sidebarSubMenuLink(item.name, item.url, item.num)
+            // /mixin sidebarSubMenuLink(name, url, num)
+      else
+        li
+          h3.c-sidebarListTitle.pb-4.mb-4
+            a.c-sidebarListLink(href="#{url}") 
+              | #{name}
+    
+    // mixin sidebarMenuLink(url, name)
+    each item in menuData.list
+      +sidebarMenuLink(item.url,  item.name)
+    // /mixin sidebarMenuLink(url, name)
+    
+    //- li
+    //-   h3.c-sidebarListTitle.pb-4.mb-4(href='#submenuOne', data-toggle='collapse', aria-expanded='false')
+    //-     a.c-sidebarListLink(href="#") 
+    //-       | Product
+    //-     a.material-icons.c-sidebarIcon.c-sidebarListLink(href='#submenuOne', data-toggle='collapse', aria-expanded='false')
+    //-       | keyboard_arrow_down
+    //-   ul#submenuOne.collapse.c-sidebarList__submenu.border-bottom.border-light.mb-4
+    //-     li.mb-4
+    //-       a.c-sidebarList__submenuLink(href='product.html')
+    //-         | ALL<sup>24</sup>
+    //-     li.mb-4
+    //-       a.c-sidebarList__submenuLink(href='product.html')
+    //-         | CUP<sup>8</sup>
+    //-     li.mb-4
+    //-       a.c-sidebarList__submenuLink(href='product.html')
+    //-         | BOWL<sup>10</sup>
+    //-     li.mb-4
+    //-       a.c-sidebarList__submenuLink(href='product.html')
+    //-         | PLATE<sup>3</sup>
+    //-     li.mb-4
+    //-       a.c-sidebarList__submenuLink(href='product.html')
+    //-         | VASE<sup>3</sup>
+    //- li
+    //-   h3.c-sidebarListTitle.pb-4.mb-4
+    //-     a.c-sidebarListLink(href="#") 
+    //-       | Blog
+    //- li
+    //-   h3.c-sidebarListTitle.pb-4.mb-4
+    //-     a.c-sidebarListLink(href="#") 
+    //-       | Contact
+.c-sidebarOverlay.d-xl-none
+// /c-sidebar

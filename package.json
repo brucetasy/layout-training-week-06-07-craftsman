@@ -33,8 +33,10 @@
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "imagesloaded": "^4.1.4",
     "lodash": "^4.17.15",
     "main-bower-files": "^2.13.3",
+    "masonry-layout": "^4.2.2",
     "material-design-icons": "^3.0.1",
     "minimist": "^1.2.0",
     "swiper": "^5.4.1"

@@ -1,11 +1,11 @@
 // .swiper-container
-section.container-fluid.pl-4.pl-lg-21.pr-0.my-12.my-lg-18
+section.container-fluid.pl-4.pl-lg-21.pr-0.mb-12.mb-lg-18
   article.swiper-container.bg-white
-    .swiper-wrapper
+    ul.list-unstyled.swiper-wrapper.mb-0
       //- mixin slideRoot()
       //- 執行： +slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice)
       mixin slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice)
-        .swiper-slide
+        li.swiper-slide
           .position-relative.c-pseudoPhoto.c-pseudoPhoto-100p.mb-2(class=bgImgClassName)
             if ( onSaleStatus == true )
               span.small.font-weight-bold.text-white.position-absolute.u-position-right.u-position-top.m-4
@@ -17,7 +17,7 @@ section.container-fluid.pl-4.pl-lg-21.pr-0.my-12.my-lg-18
               span.mr-2
                 | #{price}
               if ( originPrice !== '')
-                del.text-light
+                del.text-lightGray
                   | #{originPrice}
       //- /mixin slideRoot
 

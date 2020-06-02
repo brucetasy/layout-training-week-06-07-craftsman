@@ -1,8 +1,10 @@
+// 英文色彩命名參考：http://www.5tu.cn/colors/yansezhongwenming.html
+
 // COLORS
 $white:           rgba(255, 255, 255, 1) !default;  //#fff !default;
 $whiteTranslucent:  rgba(255, 255, 255, 0.6) !default;
-$gray-100: rgba(0, 0, 0, 0.38) !default;  // #f8f9fa !default;
-$gray-200: #e9ecef !default;
+$gray-100: rgba(242, 242, 242, 1) !default;  // #f8f9fa !default;
+$gray-200: rgba(0, 0, 0, 0.38) !default;  // #e9ecef !default
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;

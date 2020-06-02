@@ -20,8 +20,13 @@ var vendorJs = function(cd){
       gulp
         .src([
           './.tmp/vendors/**/**.js',  // 注意相對路徑 ./ 取得站台下的 .tmp 資料夾路徑
-          './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+          './node_modules/bootstrap/dist/js/bootstrap.bundle.js'
+          ,
           './node_modules/swiper/js/swiper.js'
+          ,
+          './node_modules/masonry-layout/dist/masonry.pkgd.js'
+          // ,
+          // './node_modules/imagesloaded/imagesloaded.js'
         ])
         .pipe($.order(['jquery.js']))
         .pipe($.concat('allVendors.js'))

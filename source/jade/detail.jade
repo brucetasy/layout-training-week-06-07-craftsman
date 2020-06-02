@@ -1,0 +1,13 @@
+extends extends/_layoutTemplate.jade
+
+block nav
+  - var path = 'detail.html'
+  include ./components/nav/_c-nav.jade
+  include ./components/nav/_c-sidebar.jade
+  
+block mainInner
+  section.container-fluid.p-fixedNavSectionFirst
+    .row
+  
+block footer
+  include ./components/_c-footer.jade
