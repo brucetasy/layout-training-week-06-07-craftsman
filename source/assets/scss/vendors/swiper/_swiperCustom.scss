@@ -9,7 +9,7 @@
   // align-items: center;
   // justify-content: center;
   @include media-breakpoint-down(lg) {
-    max-width: 300px;
+    max-width: 240px;
   }
   @include media-breakpoint-up(xl) {
     max-width: 350px;

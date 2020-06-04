@@ -68,25 +68,10 @@
     &:hover {
       color: $black;
     }
-    // @include media-breakpoint-up(xl) {
-    //   padding-top: 0;
-    //   padding-bottom: 0;
-    // }
-    // &--index {
-    //   @include media-breakpoint-down(lg) {
-    //     color: $white;
-    //     &:hover {
-    //       color: $white;
-    //     }
-    //   }
-    // }
   }
   &NavMenu{
     display: flex;
     align-items: center;
-    // @include media-breakpoint-down(lg) {
-    //   display: none;
-    // }
     @include media-breakpoint-up(xl) {
       margin-left: auto;
       margin-bottom: 0;

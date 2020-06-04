@@ -1,9 +1,17 @@
 .c-footerForm {
   @include media-breakpoint-up(lg) {
     min-height: 400px;
+    min-height: 50vh;
   }
   &--bgImg {
     @include retina('../../assets/img/subscribe-bgImg.jpg', 2, cover, center right no-repeat)
+  }
+  &__content {
+    &--mask {
+      @include media-breakpoint-down(sm) {
+        background-color: rgba(0, 0, 0, .38);
+      }
+    }
   }
   &Title {
     @include media-breakpoint-down(lg) {

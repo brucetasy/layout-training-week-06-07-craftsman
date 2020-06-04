@@ -1,5 +1,9 @@
 .c-author {
   min-height: 400px;
+  @include media-breakpoint-up(lg) {
+    min-height: 50vh;
+  }
+  
   &--bgImg {
     @include retina('../../assets/img/artDirector.jpg', 2, cover, center center no-repeat)
   }

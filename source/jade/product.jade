@@ -27,19 +27,19 @@ block mainInner
   section.container.d-none.d-lg-block.mb-0
     ul.list-unstyled.row.js-masonry-productList
       mixin productListRoot-desktop(onSaleStatus, bgImgClassName, productListTitle, price, originPrice)
-        a.text-black(href="detail.html")
-          li.col-4.js-masonry-productList__item.mb-md-12
-            .position-relative.c-pseudoPhoto.mb-2( class=bgImgClassName )
-              if ( onSaleStatus == true )
+        li.col-4.js-masonry-productList__item.mb-md-12
+          a.d-block.text-black.text-decoration-none(href="detail.html")
+            .position-relative.c-pseudoPhoto.mb-2(class=bgImgClassName)
+              if (onSaleStatus == true)
                 span.small.font-weight-bold.text-white.position-absolute.u-position-right.u-position-top.m-4
                   | On Sale
             div
-              h3.font-weight-bold.u-lineHeight-150.mb-1
-                | #{ productListTitle }
+              h2.h3.font-weight-bold.u-lineHeight-150.mb-1
+                | #{productListTitle}
               p.mb-0
                 span.mr-2
                   | #{price}
-                if ( originPrice !== '')
+                if (originPrice !== '')
                   del.text-lightGray
                     | #{originPrice}
         // /li.col-4.js-masonry-productList__item.mb-md-12
@@ -79,12 +79,12 @@ block mainInner
                 span.small.font-weight-bold.text-white.position-absolute.u-position-right.u-position-top.m-2
                   | On Sale
             div
-              h3.h4.font-weight-bold.u-lineHeight-150.mb-1
-                | #{ productListTitle }
+              h2.h4.font-weight-bold.u-lineHeight-150.mb-1
+                | #{productListTitle}
               p.mb-0
                 span.small.mr-2
                   | #{price}
-                if ( originPrice !== '')
+                if (originPrice !== '')
                   del.text-lightGray
                     | #{originPrice}
         // /li.col-4.js-masonry-productList__item.mb-md-12
