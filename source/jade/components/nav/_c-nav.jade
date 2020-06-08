@@ -31,7 +31,7 @@ if (path !== "")
                   //-   a.c-navbarLink(href='contact.html')
                   //-     | Contact
               li.list-inline-item.d-flex
-                a.material-icons.c-navbarLink.c-navbarIconLink(href='cart.html') 
+                a.material-icons.c-navbarLink.c-navbarIconLink(href='#', data-toggle='modal', data-target='#modalRightScrollable') 
                   | shopping_cart
     // /if (path === 'index.html')
   else if (path === 'checkout-3.html')
@@ -67,7 +67,7 @@ if (path !== "")
                   each item in menuData.list
                     +NavMenuLink(item.url,  item.name)
               li.list-inline-item.d-flex
-                a.material-icons.c-navbarLink.c-navbarIconLink(href='cart.html') 
+                a.material-icons.c-navbarLink.c-navbarIconLink(href='#', data-toggle='modal', data-target='#modalRightScrollable') 
                   | shopping_cart
     // /else if (path === 'detail.html')
 
@@ -96,7 +96,7 @@ each item in menuData.list
                   each item in menuData.list
                     +NavMenuLink(item.url,  item.name)
               li.list-inline-item.d-flex
-                a.material-icons.c-navbarLink.c-navbarIconLink(href='cart.html') 
+                a.material-icons.c-navbarLink.c-navbarIconLink(href='#', data-toggle='modal', data-target='#modalRightScrollable') 
                   | shopping_cart
     // /if (path === item.url) 
     

@@ -4,19 +4,18 @@ block nav
   - var path = 'product.html'
   include ./components/nav/_c-nav.jade
   include ./components/nav/_c-sidebar.jade
-  
 
 block mainInner
   section.container-fluid.p-fixedNavSectionFirst.bg-light.mb-6.mb-lg-12
     .row
-      ul.container.list-inline.mb-0.p-productSubMenu 
+      ul.container.list-inline.mb-0.p-productSubMenu.d-flex.flex-wrap
         mixin productSubMenuRoot(name, url, num, index)
           if (name === 'All')
-            li.list-inline-item.mr-6.mr-lg-10
+            li.list-inline-item.p-productSubMenu__item
               a.d-inline-block.text-decoration-none.text-primary.font-weight-bold.py-4.py-lg-6(href='#{url}')
                 | #{name}<sup>#{num}</sup>
           else
-            li.list-inline-item.mr-6.mr-lg-10
+            li.list-inline-item.p-productSubMenu__item
               a.d-inline-block.text-decoration-none.text-secondary.py-4.py-lg-6(href='#{url}')
                 | #{name}<sup>#{num}</sup>
         // mixin productSubMenuRoot(name, url, num)
@@ -110,5 +109,9 @@ block mainInner
           a.page-link(href='#') 3
     // /.pagination
   // /行動版
+  // _c-modalRightScrollable-callCart.jade
+  include ./components/_c-modalRightScrollable-callCart.jade
+  // /_c-modalRightScrollable-callCart.jade
+
 block footer
   include ./components/_c-footer.jade

@@ -9,7 +9,7 @@
   &__content {
     &--mask {
       @include media-breakpoint-down(sm) {
-        background-color: rgba(0, 0, 0, .38);
+        background-color: $gray-200;
       }
     }
   }

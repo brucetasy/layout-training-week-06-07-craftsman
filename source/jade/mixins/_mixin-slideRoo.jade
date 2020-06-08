@@ -1,0 +1,19 @@
+//- mixin slideRoot()
+//- 執行： +slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice)
+mixin slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice)
+  li.swiper-slide
+    a.w-100.text-black.text-decoration-none(href="detail.html")
+      .position-relative.c-pseudoPhoto.c-pseudoPhoto-100p.mb-2(class=bgImgClassName)
+        if ( onSaleStatus == true )
+          span.small.font-weight-bold.text-white.position-absolute.u-position-right.u-position-top.m-4
+            | On Sale
+      div
+        h3.font-weight-bold.u-lineHeight-150.mb-1
+          | #{slideRootTitle}
+        p.mb-0
+          span.mr-2
+            | #{price}
+          if ( originPrice !== '')
+            del.text-lightGray
+              | #{originPrice}
+//- /mixin slideRoot

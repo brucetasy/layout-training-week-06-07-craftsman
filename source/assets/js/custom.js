@@ -45,16 +45,20 @@ $(function () {
   /* productSlideSwiper
   -------------------------------------------------- */
   var productSlideSwiper = new Swiper('.swiper-container', {
-    slidesPerView: 'auto',
-    spaceBetween: 16, // 全域設定
-    breakpoints: {
-      1200: { // 斷點 xl 時的間隔
-        spaceBetween: 30,
-      },
-      // 768: {
-      //   spaceBetween: 16,
-      // }
+    autoplay: {
+      delay: 3000,
     },
+    speed: 2000,
+    slidesPerView: 'auto',
+    // spaceBetween: 16, // 全域設定
+    // breakpoints: {
+    //   1200: { // 斷點 xl 時的間隔
+    //     // spaceBetween: 30,
+    //   },
+    //   // 768: {
+    //   //   spaceBetween: 16,
+    //   // }
+    // },
   })
   /* End of productSlideSwiper
   -------------------------------------------------- */

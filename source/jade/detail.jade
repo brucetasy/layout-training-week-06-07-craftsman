@@ -6,8 +6,82 @@ block nav
   include ./components/nav/_c-sidebar.jade
   
 block mainInner
+  // section.container-fluid.p-fixedNavSectionFirst
   section.container-fluid.p-fixedNavSectionFirst
-    .row
-  
+    article.row.pt-xl-12
+      // .container.c-cardOutOf
+      .container.c-cardOutOf
+        // .row.mb-6.mb-lg-12.c-cardOutOfBody
+        .row.mb-6.mb-lg-12.c-cardOutOfBody
+          // .col-12.col-lg-8.c-cardOutOfBody__cover
+          .col-12.col-lg-8.c-cardOutOfBody__cover
+            .c-cardOutOfBody__cover__inner
+              .c-cardOutOfPseudoPhoto.c-pseudoPhoto--TatamiCup
+                .small.font-weight-bold.text-white.c-cardOutOfPseudoPhoto__text.m-xl-6
+                  | On Sale
+          // /.col-12.col-lg-8.c-cardOutOfBody__cover
+          // .col-12.col-lg-5.c-cardOutOfBody__panel
+          .col-12.col-lg-5.c-cardOutOfBody__panel
+            .c-cardOutOfBody__panel__inner.bg-white.p-4.py-xl-8.pl-xl-8.pr-xl-0
+              ol.breadcrumb.bg-transparent.p-0.mb-2.mb-xl-4
+                li.breadcrumb-item
+                  a.text-secondary(href='index.html')
+                    | Home
+                li.breadcrumb-item
+                  a.text-secondary(href='product.html')
+                    | Product
+                li.breadcrumb-item.active(aria-current='page')
+                  | Cup
+              h1.c-cardOutOfTitle.mb-4
+                | Tatami Cup
+              // .c-cardOutOfBody__panelForm
+              .c-cardOutOfBody__panelForm
+                //- https://getbootstrap.com/docs/4.5/components/input-group/#multiple-inputs
+                //- .input-group-prepend 開頭樣式、.input-group-append 結尾樣式
+                .input-group.c-cardOutOfBody__panelInputGroup.mr-2.mb-4.mb-lg-4.mb-xl-0.order-xl-1
+                  .input-group-prepend
+                    button.btn.btn-light(type='button')
+                      .material-icons.align-middle
+                        | add
+                  input.form-control.bg-light.border-0.text-center.h-auto.px-1(type='text', value="1")
+                  .input-group-append
+                    button.btn.btn-light(type='button')
+                      .material-icons.align-middle
+                        | remove
+                ul.list-unstyled.text-right.c-cardOutOfBody__panelText.order-xl-0.mb-4.mb-xl-6
+                  li
+                    del.text-lightGray
+                      | NT$1,200
+                  li
+                    .h3.font-weight-bold.mb-0
+                      | NT$1,080
+                button.btn.btn-primary.order-xl-2.flex-grow-1.c-cardOutOfBody__panelBtn(type='button', data-toggle='modal', data-target='#modalRightScrollable')
+                  span.align-middle.font-weight-bold Add to cart
+              // /.c-cardOutOfBody__panelForm
+          // /.col-12.col-lg-5.c-cardOutOfBody__panel
+        // /.row.mb-6.mb-lg-12.c-cardOutOfBody
+        // .row.c-cardOutOfFooter.mb-12.mb-lg-18
+        .row.c-cardOutOfFooter.mb-12.mb-lg-18
+          .col-lg-5
+            p.c-cardOutOfFooter__text.mb-4.mb-lg-0
+              | This beautiful light grey cup comes from Taiwan. Add some minimalist scenes to your lifetime and use this cup for tea, coffee, dessert, or to place small items as a dish tray.
+          .col-lg-3
+            ul.list-unstyled.mb-0.text-secondary.c-cardOutOfFooter__subText
+              li Made in Taiwan
+              li 8 x 8 x 6 cm
+              li Dishwasher and Microwave-safe
+        // /.row.c-cardOutOfFooter.mb-12.mb-lg-18
+      // /.container.c-cardOutOf
+  // /section.container-fluid.p-fixedNavSectionFirst
+  // _c-modalRightScrollable-callCart.jade
+  include ./components/_c-modalRightScrollable-callCart.jade
+  // /_c-modalRightScrollable-callCart.jade
+  // c-detailSlideShow.jade
+  include ./mixins/_mixin-slideRoo.jade
+  include ./components/_c-detailSlideShow.jade
+  // /c-detailSlideShow.jade
+
 block footer
   include ./components/_c-footer.jade
+
+

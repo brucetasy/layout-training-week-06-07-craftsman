@@ -189,3 +189,17 @@ block mainInner
               button.btn.btn-secondary(type='button') Left
               button.btn.btn-primary(type='button') Middle
               button.btn.btn-secondary(type='button') Right
+
+        hr
+        .input-group.mb-5(style="max-width: 150px;")
+              .input-group-prepend
+                button.btn.btn-light(type='button')
+                  .material-icons.align-middle
+                    | add
+              input.form-control.bg-light.border-0.text-center.h-auto.px-1(type='text', value="1")
+              .input-group-append
+                button.btn.btn-light(type='button')
+                  .material-icons.align-middle
+                    | remove
+
+        input.form-control(type='text', value="1")

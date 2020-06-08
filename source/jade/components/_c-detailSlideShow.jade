@@ -1,0 +1,21 @@
+section.container-fluid
+  .row
+    .container.mb-12.mb-lg-18
+      .row
+        .col-12.col-xl-5
+          h2.h2.font-weight-bold.text-black.mb-4.mb-md-8
+            | You might also like…
+      .row
+        .col-12
+          // article.swiper-container.swiper-containerExtendReght.bg-whit
+          article.swiper-container.swiper-containerExtendReght.bg-whit
+            ul.list-unstyled.swiper-wrapper.mb-0
+              // mixin slideRoot - output
+              +slideRoot( true, 'c-pseudoPhoto--BaifanBowl', 'Baifan Bowl', 'NT$1,800', 'NT$1,980' )
+              +slideRoot( false, 'c-pseudoPhoto--KabiMug', 'Kabi Mug', 'NT$980', '' )
+              +slideRoot( false, 'c-pseudoPhoto--LimdaeCup', 'Limdae Cup', 'NT$2,400', '' )
+              +slideRoot( true, 'c-pseudoPhoto--CoupleCollection', 'Couple Collection', 'NT$2,800', 'NT$1,980' )
+              // /mixin slideRoot - output
+            .swiper-pagination
+          // /article.swiper-container.swiper-containerExtendReght.bg-whit
+// /section.container-fluid

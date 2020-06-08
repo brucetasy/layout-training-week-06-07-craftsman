@@ -5,6 +5,7 @@
 -------------------------------------------------- */
 
 
+
 /* mixin
 -------------------------------------------------- */
 @import 'mixin/bgImg-retina';
@@ -12,9 +13,9 @@
 -------------------------------------------------- */
 
 
+
 /* vendors
 -------------------------------------------------- */
-
 
 /*----------  bootstrap 4  ----------*/
 @import "helper/colorsVar";
@@ -53,7 +54,8 @@
 @import "../../../node_modules/bootstrap/scss/progress";
 @import "../../../node_modules/bootstrap/scss/media";
 @import "../../../node_modules/bootstrap/scss/list-group";
-@import "../../../node_modules/bootstrap/scss/close";
+@import "vendors/bs4/close";
+// @import "../../../node_modules/bootstrap/scss/close";
 @import "../../../node_modules/bootstrap/scss/toasts";
 @import "../../../node_modules/bootstrap/scss/modal";
 // @import "vendors/bs4/modal";
@@ -62,7 +64,6 @@
 @import "../../../node_modules/bootstrap/scss/carousel";
 @import "../../../node_modules/bootstrap/scss/spinners";
 @import "../../../node_modules/bootstrap/scss/utilities";
-// @import "vendors/bs4/utilities/sizing-custom";
 /*----------  /bootstrap 4  ----------*/
 
 /*----------  swiper  ----------*/
@@ -74,6 +75,7 @@
 -------------------------------------------------- */
 
 
+
 /* base
 -------------------------------------------------- */
 @import "base/logo";
@@ -81,21 +83,11 @@
 -------------------------------------------------- */
 
 
+
 /* page
 -------------------------------------------------- */
-.p-fixedNavSectionFirst {
-  @include media-breakpoint-down(lg) {
-    margin-top: 53px;
-  }
-  @include media-breakpoint-up(xl) {
-    margin-top: 77px;
-  }
-}
-.p-productSubMenu {
-  @include media-breakpoint-up(xl) {
-    font-size: 24px;
-  }
-}
+@import 'pages/p-public';
+@import 'pages/p-product';
 /* End of page
 -------------------------------------------------- */
 
@@ -110,12 +102,72 @@
 // /layout
 // index & checkout-3 page use
 @import "components/c-visionCard";
-@import "components/c-author";
 // /index & checkout-3 page use
-
+// index
+@import "components/c-author";
 @import "components/c-staggerList";
+// index
+// pages public
 @import "components/c-pseudoPhoto";
-
+.c-cartList {
+  &__item {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 2px;
+    &__cover {
+      @include media-breakpoint-down(md) {
+        min-width: 96px;
+      }
+      @include media-breakpoint-up(lg) {
+        min-width: 112px;
+      }
+    }
+  }
+  &Prices {
+    &__special {
+      display: inline-block;
+      vertical-align: bottom;
+      @include media-breakpoint-down(md) {
+        font-size: 14px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 16px;
+      }
+    }
+    &__origin {
+      display: inline-block;
+      vertical-align: bottom;
+      @include media-breakpoint-down(md) {
+        font-size: 12px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+      }
+    }
+  }
+  &Count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__btns {
+      max-width: 105px;
+    }
+    &__pice {
+      margin-bottom: 0;
+    }
+  }
+  &Table, &SubmitBtn {
+    @include media-breakpoint-up(lg) {
+      padding-left: 110px;
+    }
+  }
+}
+// pages public
+// detail
+@import "components/c-cardOutOf";
+@import "components/c-modal";
+// detail
 /* End of components
 -------------------------------------------------- */
 
@@ -124,5 +176,6 @@
 /* utilities
 -------------------------------------------------- */
 @import "utilities/u-custom";
+@import "utilities/sizing-custom";
 /* End of utilities
 -------------------------------------------------- */

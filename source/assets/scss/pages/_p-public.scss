@@ -1,0 +1,8 @@
+.p-fixedNavSectionFirst {
+  @include media-breakpoint-down(lg) {
+    margin-top: 53px;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 77px;
+  }
+}

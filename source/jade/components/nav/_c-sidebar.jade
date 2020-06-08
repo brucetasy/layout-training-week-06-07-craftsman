@@ -3,7 +3,7 @@ nav.c-sidebar.js-c-sidebar.bg-white.d-xl-none
   .c-sidebar__header.mb-8
     a.material-icons.c-sidebarIcon.text-black.text-decoration-none.js-dismiss(href="#")
       | arrow_back
-    a.material-icons.c-sidebarIcon.text-black.text-decoration-none(href="cart.html")
+    a.material-icons.c-sidebarIcon.text-black.text-decoration-none(href="#", data-toggle='modal', data-target='#modalRightScrollable')
       | shopping_cart
   ul.c-sidebarList
     mixin sidebarSubMenuLink(name, url, num)
