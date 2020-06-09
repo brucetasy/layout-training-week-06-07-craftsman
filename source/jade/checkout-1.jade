@@ -11,11 +11,63 @@ block mainInner
       .container-xl
         .row
           .col-md-5.col-xl-4.mr-xl-auto.order-md-3.mb-6
-            .bg-light
-              | .col-xl-4.mr-xl-auto.bg-light
+            //- 參考資料來源：https://getbootstrap.com/docs/4.5/components/collapse/#multiple-targets
+            //- 說明：在 multiCollapseExample1 與 #multiCollapseExample2 上共用 .multi-collapse 的 JS 的 data-target=".multi-collapse" 對象，透過按鈕上的 data-target=".multi-collapse" 來操作，其中 #multiCollapseExample2 如果在 .multi-collapse.collapse 預設時就加上 .show 的話，在點按按鈕時就可以將 multiCollapseExample1 與 #multiCollapseExample2 二個目標對象分別錯開做開閤效果 (一邊開一邊關)。
+            .card.bg-light.border-light
+              .card-header.d-flex.d-md-none.align-items-center.justify-content-between.bg-light.border-light
+                span Order Summary
+                span.material-icons.text-primary
+                  | keyboard_arrow_up
+              .card-body.pt-2.pt-lg-6.pb-lg-8.px-lg-8
+                ul.list-unstyled.mb-0
+                  li
+                    table.table.table-borderless.mb-2
+                      tbody.u-lineHeight-115
+                        tr
+                          td.align-middle.py-2.px-0(style="width: 48px;")
+                            .c-pseudoPhoto.c-pseudoPhoto-100p.c-pseudoPhoto--TatamiCup.rounded-0
+                          td.align-middle.py-2.px-4
+                            p.mb-0
+                              span.font-weight-bold Tatami Cup 
+                              span ×1
+                          td.align-middle.py-2.px-0.text-right
+                            | NT$1,080
+                        tr
+                          td.align-middle.py-2.px-0(style="width: 48px;")
+                            .c-pseudoPhoto.c-pseudoPhoto-100p.c-pseudoPhoto--BaifanBowl.rounded-0
+                          td.align-middle.py-2.px-4
+                            p.mb-0
+                              span.font-weight-bold Baifan Bowl 
+                              span ×2
+                          td.align-middle.py-2.px-0.text-right
+                            | NT$3,600
+                  // /li
+                  li.border-top.border-bottom.border-lightGray.py-2.mb-4
+                    table.table.table-borderless.mb-0
+                      tbody.u-lineHeight-115
+                        tr
+                          td.px-0.py-2
+                            | Subtotal
+                          td.px-0.py-2.text-right
+                            | NT$4,680
+                        tr
+                          td.px-0.py-2
+                            | Shipping
+                          td.px-0.py-2.text-right
+                            | NT$80
+                  // /li.border-top.border-bottom.border-lightGray.py-2.mb-4
+                  li
+                    table.table.table-borderless.mb-0
+                      tfoot.h3.font-weight-bold
+                        tr
+                          td.px-0.py-0 
+                            | Total
+                          td.px-0.py-0.text-right
+                            | NT$4,760
+                  // /li
+
           nav.col-12.col-xl-10.order-md-1.mb-6.mb-xl-8.mx-xl-auto(aria-label="breadcrumb")
             ol.breadcrumb.bg-white.p-0.mb-0
-              //- Cart > Information > Payment
               li.breadcrumb-item.breadcrumb-item--arrow
                 a(href='#') Cart
               li.breadcrumb-item.breadcrumb-item--arrow
@@ -26,10 +78,9 @@ block mainInner
             .form-group.mb-8
               label.h4(for='FormControlInputMail')
                 | Contact information
-              //- label.sr-only(for='FormControlInputMail') Email
               input#FormControlInputMail.form-control.mb-2(type='email', placeholder='Email')
               .custom-control.custom-checkbox
-                input#EmailCheckbox.custom-control-input(type='checkbox')
+                input#EmailCheckbox.custom-control-input(type='checkbox', name='email-checkbox', value='email-checkbox', checked)
                 label.custom-control-label(for='EmailCheckbox')
                   span.h6.text-secondary.mb-0 Keep me up to date on news and special offers
             // /.form-group
@@ -75,15 +126,6 @@ block mainInner
                   span.d-inline-block.align-middle
                     | Return to cart
             // .form-row-3
-            ul.h6.list-inline.w-100.d-flex.flex-column.d-md-inline-flex.flex-md-row.border-top.border-lightGray.mb-2
-              li.list-inline-item.mr-md-6
-                a.d-block.text-secondary.py-2(href="#")
-                  | Purchase Policy
-              li.list-inline-item.mr-md-6
-                a.d-block.text-secondary.py-2(href="#")
-                  | Privacy Policy
-              li.list-inline-item
-                a.d-block.text-secondary.py-2(href="#")
-                  | Terms & Conditions
+            include ./components/_c-formFootList--cartPayment.jade
           // /form.col-lg-6.ml-lg-auto
   // /section.container-fluid.p-fixedNavSectionFirst

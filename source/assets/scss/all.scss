@@ -16,11 +16,9 @@
 
 /* vendors
 -------------------------------------------------- */
-
 /*----------  bootstrap 4  ----------*/
-@import "helper/colorsVar";
 // @import "vendors/bs4/bootstrap";
-
+@import "helper/colorsVar";
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "vendors/bs4/Variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
@@ -35,7 +33,7 @@
 // @import "vendors/bs4/tables";
 // @import "vendors/bs4/forms";
 @import "vendors/bs4/forms";
-@import "../../../node_modules/bootstrap/scss/forms";
+// @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "../../../node_modules/bootstrap/scss/transitions";
 @import "../../../node_modules/bootstrap/scss/dropdown";
@@ -46,9 +44,10 @@
 @import "../../../node_modules/bootstrap/scss/nav";
 @import "../../../node_modules/bootstrap/scss/navbar";
 @import "../../../node_modules/bootstrap/scss/card";
-@import "../../../node_modules/bootstrap/scss/breadcrumb";
-// @import "../../../node_modules/bootstrap/scss/pagination";
+@import "vendors/bs4/breadcrumb";
+// @import "../../../node_modules/bootstrap/scss/breadcrumb";
 @import "vendors/bs4/pagination";
+// @import "../../../node_modules/bootstrap/scss/pagination";
 @import "../../../node_modules/bootstrap/scss/badge";
 // @import "../../../node_modules/bootstrap/scss/jumbotron";
 @import "../../../node_modules/bootstrap/scss/alert";
@@ -66,12 +65,10 @@
 @import "../../../node_modules/bootstrap/scss/spinners";
 @import "../../../node_modules/bootstrap/scss/utilities";
 /*----------  /bootstrap 4  ----------*/
-
 /*----------  swiper  ----------*/
 @import "../../../node_modules/swiper/swiper";
 @import "vendors/swiper/swiperCustom";
 /*----------  swiper  ----------*/
-
 /* End of vendors
 -------------------------------------------------- */
 
@@ -116,10 +113,6 @@
 @import "components/c-cardOutOf";
 @import "components/c-modal";
 // detail
-
-.breadcrumb-item.breadcrumb-item--arrow + .breadcrumb-item::before {
-  content: ">";
-}
 /* End of components
 -------------------------------------------------- */
 
@@ -128,6 +121,5 @@
 /* utilities
 -------------------------------------------------- */
 @import "utilities/u-custom";
-@import "utilities/sizing-custom";
 /* End of utilities
 -------------------------------------------------- */
