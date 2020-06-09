@@ -34,6 +34,7 @@
 @import "../../../node_modules/bootstrap/scss/tables";
 // @import "vendors/bs4/tables";
 // @import "vendors/bs4/forms";
+@import "vendors/bs4/forms";
 @import "../../../node_modules/bootstrap/scss/forms";
 @import "../../../node_modules/bootstrap/scss/buttons";
 @import "../../../node_modules/bootstrap/scss/transitions";
@@ -109,65 +110,16 @@
 // index
 // pages public
 @import "components/c-pseudoPhoto";
-.c-cartList {
-  &__item {
-    display: flex;
-    align-items: stretch;
-    overflow: hidden;
-    border-radius: 2px;
-    &__cover {
-      @include media-breakpoint-down(md) {
-        min-width: 96px;
-      }
-      @include media-breakpoint-up(lg) {
-        min-width: 112px;
-      }
-    }
-  }
-  &Prices {
-    &__special {
-      display: inline-block;
-      vertical-align: bottom;
-      @include media-breakpoint-down(md) {
-        font-size: 14px;
-      }
-      @include media-breakpoint-up(lg) {
-        font-size: 16px;
-      }
-    }
-    &__origin {
-      display: inline-block;
-      vertical-align: bottom;
-      @include media-breakpoint-down(md) {
-        font-size: 12px;
-      }
-      @include media-breakpoint-up(lg) {
-        font-size: 14px;
-      }
-    }
-  }
-  &Count {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__btns {
-      max-width: 105px;
-    }
-    &__pice {
-      margin-bottom: 0;
-    }
-  }
-  &Table, &SubmitBtn {
-    @include media-breakpoint-up(lg) {
-      padding-left: 110px;
-    }
-  }
-}
+@import "components/c-cartList";
 // pages public
 // detail
 @import "components/c-cardOutOf";
 @import "components/c-modal";
 // detail
+
+.breadcrumb-item.breadcrumb-item--arrow + .breadcrumb-item::before {
+  content: ">";
+}
 /* End of components
 -------------------------------------------------- */
 

@@ -34,15 +34,6 @@ if (path !== "")
                 a.material-icons.c-navbarLink.c-navbarIconLink(href='#', data-toggle='modal', data-target='#modalRightScrollable') 
                   | shopping_cart
     // /if (path === 'index.html')
-  else if (path === 'checkout-3.html')
-    // else if (path === 'checkout-3.html')
-    .container-fluid.c-nav.c-visionNav.fixed-top
-      .row
-        .container-xl
-          nav.c-navbar.px-xl-0.py-xl-3
-            a.logo.c-navbar__logo.c-navbarLink(href="index.html")
-              | craftsman
-    // /else if (path === 'checkout-3.html')
   else if (path === 'detail.html')
     // else if (path === 'detail.html')
     .container-fluid.c-nav.fixed-top
@@ -70,6 +61,27 @@ if (path !== "")
                 a.material-icons.c-navbarLink.c-navbarIconLink(href='#', data-toggle='modal', data-target='#modalRightScrollable') 
                   | shopping_cart
     // /else if (path === 'detail.html')
+  else if (path === 'checkout-1.html' || path === 'checkout-2.html')
+    // else if (path === 'checkout-1.html' || path === 'checkout-2.html')
+    .container-fluid.c-nav.fixed-top
+      .row
+        .container-xl
+          nav.c-navbar.px-xl-0.py-xl-3
+            .col-xl-10.mx-xl-auto
+              .row
+                a.logo.c-navbar__logo.c-navbarLink(href="index.html")
+                  | craftsman
+          //- .row
+    // /else if (path === 'checkout-1.html' || path === 'checkout-2.html')
+  else if (path === 'checkout-3.html')
+    // else if (path === 'checkout-3.html')
+    .container-fluid.c-nav.c-visionNav.fixed-top
+      .row
+        .container-xl
+          nav.c-navbar.px-xl-0.py-xl-3
+            a.logo.c-navbar__logo.c-navbarLink(href="index.html")
+              | craftsman
+    // /else if (path === 'checkout-3.html')
 
 each item in menuData.list
   if (path === item.url)
