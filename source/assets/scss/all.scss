@@ -26,7 +26,7 @@
 @import "../../../node_modules/bootstrap/scss/reboot";
 @import "vendors/bs4/type";
 // @import "../../../node_modules/bootstrap/scss/type";
-@import "../../../node_modules/bootstrap/scss/images";
+// @import "../../../node_modules/bootstrap/scss/images";
 @import "../../../node_modules/bootstrap/scss/code";
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/tables";
@@ -48,20 +48,20 @@
 // @import "../../../node_modules/bootstrap/scss/breadcrumb";
 @import "vendors/bs4/pagination";
 // @import "../../../node_modules/bootstrap/scss/pagination";
-@import "../../../node_modules/bootstrap/scss/badge";
+// @import "../../../node_modules/bootstrap/scss/badge";
 // @import "../../../node_modules/bootstrap/scss/jumbotron";
-@import "../../../node_modules/bootstrap/scss/alert";
-@import "../../../node_modules/bootstrap/scss/progress";
+// @import "../../../node_modules/bootstrap/scss/alert";
+// @import "../../../node_modules/bootstrap/scss/progress";
 @import "../../../node_modules/bootstrap/scss/media";
 @import "../../../node_modules/bootstrap/scss/list-group";
 @import "vendors/bs4/close";
 // @import "../../../node_modules/bootstrap/scss/close";
-@import "../../../node_modules/bootstrap/scss/toasts";
+// @import "../../../node_modules/bootstrap/scss/toasts";
 @import "../../../node_modules/bootstrap/scss/modal";
 // @import "vendors/bs4/modal";
-@import "../../../node_modules/bootstrap/scss/tooltip";
-@import "../../../node_modules/bootstrap/scss/popover";
-@import "../../../node_modules/bootstrap/scss/carousel";
+// @import "../../../node_modules/bootstrap/scss/tooltip";
+// @import "../../../node_modules/bootstrap/scss/popover";
+// @import "../../../node_modules/bootstrap/scss/carousel";
 @import "../../../node_modules/bootstrap/scss/spinners";
 @import "../../../node_modules/bootstrap/scss/utilities";
 /*----------  /bootstrap 4  ----------*/
@@ -113,6 +113,9 @@
 @import "components/c-cardOutOf";
 @import "components/c-modal";
 // detail
+// checkout-1 & checkout-2
+@import "components/c-toogleCard";
+// /checkout-1 & checkout-2
 /* End of components
 -------------------------------------------------- */
 

@@ -50,15 +50,6 @@ $(function () {
     },
     speed: 2000,
     slidesPerView: 'auto',
-    // spaceBetween: 16, // 全域設定
-    // breakpoints: {
-    //   1200: { // 斷點 xl 時的間隔
-    //     // spaceBetween: 30,
-    //   },
-    //   // 768: {
-    //   //   spaceBetween: 16,
-    //   // }
-    // },
   })
   /* End of productSlideSwiper
   -------------------------------------------------- */
@@ -78,4 +69,24 @@ $(function () {
   /* End of product-masonry
   -------------------------------------------------- */
 
+
+  /* checkout-1.html page "Return to cart" btn click to "product.html" page call ID show model
+  -------------------------------------------------- */
+  var url = location.href;
+  var urlSplitLen = url.split('?').length;
+  if (urlSplitLen > 1) {
+    if (url.split('?')[1].split('=').length > 1) {
+      console.log(url.split('?')[1].split('='));
+      var modalIDname = url.split('?')[1].split('=')[0];
+      var modalIDvalue = url.split('?')[1].split('=')[1];
+      switch (modalIDname){
+        case 'modalID':
+          $( '#'+ modalIDvalue).modal('show');
+        break;
+      }
+    }
+  }  
+  /* End of checkout-1.html page "Return to cart" btn click to "product.html" page call ID show model
+  -------------------------------------------------- */
+  
 });

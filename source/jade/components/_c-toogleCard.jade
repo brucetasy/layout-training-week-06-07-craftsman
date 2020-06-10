@@ -1,0 +1,57 @@
+//- * 參考資料來源：https://getbootstrap.com/docs/4.5/components/collapse/#multiple-targets
+//- * 說明：在 multiCollapseExample1 與 #multiCollapseExample2 上共用 .multi-collapse 的 JS 的 data-target=".multi-collapse" 對象，透過按鈕上的 data-target=".multi-collapse" 來操作，其中 #multiCollapseExample2 如果在 .multi-collapse.collapse 預設時就加上 .show 的話，在點按按鈕時就可以將 multiCollapseExample1 與 #multiCollapseExample2 二個目標對象分別錯開做開閤效果 (一邊開一邊關)。
+//- * 透過點按對象觸發 .multi-collapse 節點上的 .collapse，如果預先有 .show 透過 toggle 方法切換加入或是移除
+.card.bg-light.border-light.c-toogleCard
+  .card-header.d-md-none.bg-light.border-light.py-4.c-toogleCardHeader(data-toggle="collapse", data-target=".multi-collapse")
+    span.mr-auto Order Summary
+    span.font-weight-bold.mr-2.multi-collapse.collapse.show NT$4,760
+    span.material-icons.text-primary.toggleIcon(data-toggle="collapse", data-target=".multi-collapse")
+      | keyboard_arrow_up
+  .d-md-block.multi-collapse.collapse
+    .card-body.pt-2.pt-lg-6.pb-lg-8.px-lg-8
+      ul.list-unstyled.mb-0
+        li
+          table.table.table-borderless.mb-2
+            tbody.u-lineHeight-115
+              tr
+                td.align-middle.py-2.px-0(style="width: 48px;")
+                  .c-pseudoPhoto.c-pseudoPhoto-100p.c-pseudoPhoto--TatamiCup.rounded-0
+                td.align-middle.py-2.px-4
+                  p.mb-0
+                    span.font-weight-bold Tatami Cup 
+                    span ×1
+                td.align-middle.py-2.px-0.text-right
+                  | NT$1,080
+              tr
+                td.align-middle.py-2.px-0(style="width: 48px;")
+                  .c-pseudoPhoto.c-pseudoPhoto-100p.c-pseudoPhoto--BaifanBowl.rounded-0
+                td.align-middle.py-2.px-4
+                  p.mb-0
+                    span.font-weight-bold Baifan Bowl 
+                    span ×2
+                td.align-middle.py-2.px-0.text-right
+                  | NT$3,600
+        // /li
+        li.border-top.border-bottom.border-lightGray.py-2.mb-4
+          table.table.table-borderless.mb-0
+            tbody.u-lineHeight-115
+              tr
+                td.px-0.py-2
+                  | Subtotal
+                td.px-0.py-2.text-right
+                  | NT$4,680
+              tr
+                td.px-0.py-2
+                  | Shipping
+                td.px-0.py-2.text-right
+                  | NT$80
+        // /li.border-top.border-bottom.border-lightGray.py-2.mb-4
+        li
+          table.table.table-borderless.mb-0
+            tbody.h3.font-weight-bold
+              tr
+                td.px-0.py-0 
+                  | Total
+                td.px-0.py-0.text-right
+                  | NT$4,760
+        // /li

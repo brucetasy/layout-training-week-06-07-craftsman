@@ -8,6 +8,7 @@ block nav
 block mainInner
   section.container-fluid.p-fixedNavSectionFirst.bg-light.mb-6.mb-lg-12
     .row
+      // ul.container.list-inline.mb-0.p-productSubMenu.d-flex.flex-wrap
       ul.container.list-inline.mb-0.p-productSubMenu.d-flex.flex-wrap
         mixin productSubMenuRoot(name, url, num, index)
           if (name === 'All')
@@ -22,6 +23,7 @@ block mainInner
         each item, index in productData.list
           +productSubMenuRoot(item.name, item.url, item.num, index)
         // /mixin productSubMenuRoot(name, url, num)
+      // /ul.container.list-inline.mb-0.p-productSubMenu.d-flex.flex-wrap
   // 桌機版
   section.container.d-none.d-lg-block.mb-0
     ul.list-unstyled.row.js-masonry-productList

@@ -47,6 +47,7 @@
   }
   &.form-control--whiteTranslucent {
     // CSS 同層疊加 className 樣式權重加分
+    border-color: $whiteTranslucent;
     &::placeholder {
       color: $whiteTranslucent;
       opacity: 1;

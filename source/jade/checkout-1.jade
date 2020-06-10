@@ -2,79 +2,29 @@ extends extends/_layoutTemplate.jade
 
 block nav
   - var path = 'checkout-1.html'
+  // _c-nav.jade
   include ./components/nav/_c-nav.jade
+  // /_c-nav.jade
 
 block mainInner
-  // section.container-fluid.p-fixedNavSectionFirst.pt-1
-  section.container-fluid.p-fixedNavSectionFirst.pt-1.pt-
+  // section.container-fluid.p-fixedNavSectionFirst.pt-1.pt-md-0
+  section.container-fluid.p-fixedNavSectionFirst.pt-1.pt-md-0
     article.row
-      .container-xl
+      .container-md
         .row
           .col-md-5.col-xl-4.mr-xl-auto.order-md-3.mb-6
-            //- 參考資料來源：https://getbootstrap.com/docs/4.5/components/collapse/#multiple-targets
-            //- 說明：在 multiCollapseExample1 與 #multiCollapseExample2 上共用 .multi-collapse 的 JS 的 data-target=".multi-collapse" 對象，透過按鈕上的 data-target=".multi-collapse" 來操作，其中 #multiCollapseExample2 如果在 .multi-collapse.collapse 預設時就加上 .show 的話，在點按按鈕時就可以將 multiCollapseExample1 與 #multiCollapseExample2 二個目標對象分別錯開做開閤效果 (一邊開一邊關)。
-            .card.bg-light.border-light
-              .card-header.d-flex.d-md-none.align-items-center.justify-content-between.bg-light.border-light
-                span Order Summary
-                span.material-icons.text-primary
-                  | keyboard_arrow_up
-              .card-body.pt-2.pt-lg-6.pb-lg-8.px-lg-8
-                ul.list-unstyled.mb-0
-                  li
-                    table.table.table-borderless.mb-2
-                      tbody.u-lineHeight-115
-                        tr
-                          td.align-middle.py-2.px-0(style="width: 48px;")
-                            .c-pseudoPhoto.c-pseudoPhoto-100p.c-pseudoPhoto--TatamiCup.rounded-0
-                          td.align-middle.py-2.px-4
-                            p.mb-0
-                              span.font-weight-bold Tatami Cup 
-                              span ×1
-                          td.align-middle.py-2.px-0.text-right
-                            | NT$1,080
-                        tr
-                          td.align-middle.py-2.px-0(style="width: 48px;")
-                            .c-pseudoPhoto.c-pseudoPhoto-100p.c-pseudoPhoto--BaifanBowl.rounded-0
-                          td.align-middle.py-2.px-4
-                            p.mb-0
-                              span.font-weight-bold Baifan Bowl 
-                              span ×2
-                          td.align-middle.py-2.px-0.text-right
-                            | NT$3,600
-                  // /li
-                  li.border-top.border-bottom.border-lightGray.py-2.mb-4
-                    table.table.table-borderless.mb-0
-                      tbody.u-lineHeight-115
-                        tr
-                          td.px-0.py-2
-                            | Subtotal
-                          td.px-0.py-2.text-right
-                            | NT$4,680
-                        tr
-                          td.px-0.py-2
-                            | Shipping
-                          td.px-0.py-2.text-right
-                            | NT$80
-                  // /li.border-top.border-bottom.border-lightGray.py-2.mb-4
-                  li
-                    table.table.table-borderless.mb-0
-                      tfoot.h3.font-weight-bold
-                        tr
-                          td.px-0.py-0 
-                            | Total
-                          td.px-0.py-0.text-right
-                            | NT$4,760
-                  // /li
-
+            // _c-toogleCard.jade
+            include ./components/_c-toogleCard.jade
+            // /_c-toogleCard.jade
+          // /.col-md-5.col-xl-4.mr-xl-auto.order-md-3.mb-6
           nav.col-12.col-xl-10.order-md-1.mb-6.mb-xl-8.mx-xl-auto(aria-label="breadcrumb")
-            ol.breadcrumb.bg-white.p-0.mb-0
-              li.breadcrumb-item.breadcrumb-item--arrow
-                a(href='#') Cart
-              li.breadcrumb-item.breadcrumb-item--arrow
-                a.font-weight-bold.text-black(href='#') Information
-              li.breadcrumb-item.breadcrumb-item--arrow.active(aria-current='page') Payment
-          // /nav.col-lg-10.mb-6.mb-lg-8.mx-lg-auto(aria-label="breadcrumb")
+            // _c-breadcrumb--cart.jade
+            - var path = 'checkout-1.html'
+            include ./components/_c-breadcrumb--cart.jade
+            // /_c-breadcrumb--cart.jade
+          // /nav.col-12.col-xl-10.order-md-1.mb-6.mb-xl-8.mx-xl-auto(aria-label="breadcrumb")
           form.col-md-7.col-xl-6.order-md-2.ml-xl-auto
+            // .form-group-Contact information
             .form-group.mb-8
               label.h4(for='FormControlInputMail')
                 | Contact information
@@ -83,49 +33,45 @@ block mainInner
                 input#EmailCheckbox.custom-control-input(type='checkbox', name='email-checkbox', value='email-checkbox', checked)
                 label.custom-control-label(for='EmailCheckbox')
                   span.h6.text-secondary.mb-0 Keep me up to date on news and special offers
-            // /.form-group
-            // .form-row-1
-            .form-row
+            // /.form-group-Contact information
+            // .form-row-Shipping address
+            .form-row.mb-6.mb-md-8
               .col-12
                 label.h4(for='inputShippingAddress')
                   | Shipping address
-              .col-12.col-md.mb-2
+              .col-12.col-md-6.mb-2
                 input.form-control#inputShippingAddress(type='text', placeholder='Name')
-              .col-12.col-md.mb-2
+              .col-12.col-md-6.mb-2
                 input.form-control(type='tel', placeholder='Phone')
-            // /.form-row-1
-            // .form-row-2
-            .form-row
-              .col-12.col-md.mb-2
+              .col-12.col-md-6.mb-2
                 select.custom-select
                   option(selected='', disabled) Country/Region
                   option(value='1') Country/Region 1
                   option(value='2') Country/Region 2
                   option(value='3') Country/Region 3
-              .col-12.col-md.mb-2
+              .col-12.col-md-6.mb-2
                 select.custom-select
                   option(selected='', disabled) City
                   option(value='1') City 1
                   option(value='2') City 2
                   option(value='3') City 3
-            // /.form-row-2
-            // .form-row-3
-            .form-row.mb-6.mb-md-8
-              .col
+              .col-12
                 input.form-control(type='text', placeholder='Address')
-            // /.form-row-3
-            // .form-row-4
+            // /.form-row-Shipping address
+            // .form-row-btns
             .form-row.d-flex.align-items-center.mb-md-6
               .col-12.col-md.mb-2.order-md-2
                 a.btn.btn-primary.btn-block(href="checkout-2.html")
                   | Continue to payment
               .col-12.col-md.mb-2.order-md-1
-                a.btn.btn-link.btn-block.text-md-left.px-md-0(href="#")
+                a.btn.btn-link.btn-block.text-md-left.px-md-0(href="product.html?modalID=modalRightScrollable")
                   span.material-icons.align-middle.mr-1
                     | keyboard_arrow_left
                   span.d-inline-block.align-middle
                     | Return to cart
-            // .form-row-3
+            // .form-row-btns
+            // _c-formFootList--cartPayment.jade
             include ./components/_c-formFootList--cartPayment.jade
-          // /form.col-lg-6.ml-lg-auto
-  // /section.container-fluid.p-fixedNavSectionFirst
+            // /_c-formFootList--cartPayment.jade
+          // /form.col-md-7.col-xl-6.order-md-2.ml-xl-auto
+  // /section.container-fluid.p-fixedNavSectionFirst.pt-1.pt-md-0

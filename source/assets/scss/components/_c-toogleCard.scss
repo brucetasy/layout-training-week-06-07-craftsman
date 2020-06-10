@@ -1,0 +1,38 @@
+.c-toogleCard {
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    // 效果
+    & .toggleIcon {
+      transform: rotate(0deg);
+      transition: all .3s;
+    }
+    &.collapsed {
+      & .toggleIcon {
+        transform: rotate(180deg);
+        transition: all .3s;
+      }
+    }
+    // /效果
+
+    &__title {
+      min-width: 67px;
+      margin-bottom: 0;
+      margin-right: 8px;
+    }
+    &__text {
+      margin-bottom: 0;
+      margin-right: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 354px;
+    }
+    &__icon {
+      margin-right: 0;
+    }
+  }
+}
