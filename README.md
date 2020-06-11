@@ -13,7 +13,7 @@
 
 ## 整體製作特點：
 - 專案中圖片使用 `background-image` 方式處理，透過 `background-image` 方式開啟頁面，較不受資料請求回應後開啟頁面的等待。
-- 偽元素自適應圖片：使用偽元素處理容器成為圖片的比例，透過容器裁切背景圖片達到自適應效果。
+- 偽元素自適應圖片：使用偽元素處理容器成為圖片的比例，透過容器裁切背景圖片達到自適應效果。
 - retina 圖片處理 (1x, 2x, 3x)
   - 配合圖片素材提供的質量規劃，較近於圖片在畫面上的像素對應，原則取用較近實際圖片尺寸象素 (例如畫面圖片寬是 500px 取用 640 px 為 1x 圖片)，可讓頁面戴入時較為順暢，不直接取最高質量而是選用較合適的對應質量單位的圖片為主。
   - 配合較大的滿版圖片直接取用較高質量，考量滿版設計為主。
@@ -37,8 +37,8 @@
   - 整合偽元素自適應圖片的方式，在 `<img>` tag 戴入時套件需依賴 [imagesLoaded](https://imagesloaded.desandro.com/) 確任圖片戴入完成，`<img>` tag 後取得圖片高寬才可處理定位運算，而此方法因為透過 CSS 預先定好容圖的高度和寬度，不用透過 [imagesLoaded](https://imagesloaded.desandro.com/) 取得元素的高寬數值，直接可讓 JavaScript 做定為處理。
 - swiper [中文](https://www.swiper.com.cn/)、[英文](https://swiperjs.com/) (產品 slideShow 插件)
   - `.swiper-container` 的父層使用滿版寬度 ( `width: calc( 50vw - 50% + 100%);` ) 動態計算突出格線系統的寬度，視窗總寬的一半 - 容器寬度的一半 = 取得單邊容器的 `margin` 寬度 + 容器總寬度 - `scoll` 寬度 (不扣要使用 內元件最後一筆的 `margin-right` 推安全邊)。
-  - 在 swiper 內元件 (`.swiper-slide`) 上可做較準的定位處理，裡面只放置四筆資料，實際上可以處理多筆，不會讓 window 自適應寬度改變後發生在 swiper 內元件 (`.swiper-slide`) 的定位不準，無法執行回彈最回一筆定位功能問題。
-- [checkout-1](https://gmwu185.github.io/layout-training-week-06-07-craftsman/checkout-1.html) 的 Return to cart 按鈕，點按後網址加上參數字串 (`'product.html?modalID=modalRightScrollable'`)，透過 JavaScript 判斷網址帶參數字串，取得 modal 的 ID 名稱，在開啟頁面時直接使用 `.modal('show')` 呼叫 cartList 區塊。
+  - 在 swiper 內元件 (`.swiper-slide`) 上可做較準的定位處理，裡面只放置四筆資料，實際上可以處理多筆，不會讓 window 自適應寬度改變後發生在 swiper 內元件 (`.swiper-slide`) 的定位不準，無法執行回彈最回一筆定位功能問題。
+- [checkout-1](https://gmwu185.github.io/layout-training-week-06-07-craftsman/checkout-1.html) 的 Return to cart 按鈕，點按後網址加上參數字串 (`'product.html?modalID=modalRightScrollable'`)，透過 JavaScript 判斷網址帶參數字串，取得 modal 的 ID 名稱，在開啟頁面時直接使用 `.modal('show')` 呼叫 cartList 區塊。
 
 
 # 字符組
