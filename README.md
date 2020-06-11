@@ -42,6 +42,13 @@
 - [checkout-1](https://gmwu185.github.io/layout-training-week-06-07-craftsman/checkout-1.html) 的 Return to cart 按鈕，點按後網址加上參數字串 (`'product.html?modalID=modalRightScrollable'`)，透過 JavaScript 判斷網址帶參數字串，取得 modal 的 ID 名稱，在開啟頁面時直接使用 `.modal('show')` 呼叫 cartList 區塊。
 
 
+## AOS 動效
+- [AOS/Animate On Scroll Library 展示](https://michalsnik.github.io/aos/)
+- 透過 [Initialize AOS](https://github.com/michalsnik/aos#1-initialize-aos) 設定回彈 (`easing: 'ease-out-back'`) 與細部效果。
+- 首頁頁面依視覺區塊設定對應不同的動效。
+- 指定 `data-aos-anchor` 設定主從效果，透過感意主要區塊同時觸發跟從區塊的動效，透過 `data-aos-delay` 設定跟從出來的時差，型成局部區塊的出場動效。
+
+
 # 字符組
 * `-`：(單中線) 相關、關連，可視為 '之' 或是 '的' 的意思，另外也用於駝峰屬性名的樣式名命，比較駝峰命名以單層為主 (較明確之意)。
 * `--`：(雙中線) 後接參數或是屬性值。
