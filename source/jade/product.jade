@@ -26,9 +26,9 @@ block mainInner
       // /ul.container.list-inline.mb-0.p-productSubMenu.d-flex.flex-wrap
   // 桌機版
   section.container.d-none.d-lg-block.mb-0
-    ul.list-unstyled.row.js-masonry-productList
-      mixin productListRoot-desktop(onSaleStatus, bgImgClassName, productListTitle, price, originPrice)
-        li.col-4.js-masonry-productList__item.mb-md-12
+    ul.list-unstyled.row.js-masonry-productList.js-productList-aos-anchor
+      mixin productListRoot-desktop(onSaleStatus, bgImgClassName, productListTitle, price, originPrice, aosDelayTime)
+        li.col-4.js-masonry-productList__item.mb-md-12(data-aos='zoom-in', data-aos-delay='#{aosDelayTime}', data-aos-anchor=".js-productList-aos-anchor")
           a.d-block.text-black.text-decoration-none(href="detail.html")
             .position-relative.c-pseudoPhoto.mb-2(class=bgImgClassName)
               if (onSaleStatus == true)
@@ -46,15 +46,15 @@ block mainInner
         // /li.col-4.js-masonry-productList__item.mb-md-12
 
       // mixin productListRoot-desktop(onSaleStatus, bgImgClassName, productListTitle, price, originPrice)
-      +productListRoot-desktop( true , 'c-pseudoPhoto-100p c-pseudoPhoto--TatamiCup', 'Tatami Cup', 'NT$1,080', 'NT$1,200' )
-      +productListRoot-desktop( true , 'c-pseudoPhoto-137p c-pseudoPhoto--HanaVase', 'Hana Vase', 'NT$3,600', 'NT$3,880' )
-      +productListRoot-desktop( true , 'c-pseudoPhoto-68p c-pseudoPhoto--BaifanBowl', 'Baifan Bowl', 'NT$1,800', 'NT$1,980' )
-      +productListRoot-desktop( false , 'c-pseudoPhoto-68p c-pseudoPhoto--LimdaeCup', 'Limdae Cup', 'NT$2,400', '' )
-      +productListRoot-desktop( false , 'c-pseudoPhoto-100p c-pseudoPhoto--SumoVase', 'Sumo Vase', 'NT$4,800', '' )
-      +productListRoot-desktop( false , 'c-pseudoPhoto-137p c-pseudoPhoto--CeramicVase', 'Ceramic Vase', 'NT$3,600', '' )
-      +productListRoot-desktop( false , 'c-pseudoPhoto-137p c-pseudoPhoto--KabiMug', 'Kabi Mug', 'NT$980', '' )
-      +productListRoot-desktop( false , 'c-pseudoPhoto-68p c-pseudoPhoto--ShiroPlate', 'Shiro Plate', 'NT$1,200', '' )
-      +productListRoot-desktop( false , 'c-pseudoPhoto-100p c-pseudoPhoto--CoupleCollection', 'Couple Collection', 'NT$2,800', '' )
+      +productListRoot-desktop( true , 'c-pseudoPhoto-100p c-pseudoPhoto--TatamiCup', 'Tatami Cup', 'NT$1,080', 'NT$1,200', 300)
+      +productListRoot-desktop( true , 'c-pseudoPhoto-137p c-pseudoPhoto--HanaVase', 'Hana Vase', 'NT$3,600', 'NT$3,880', 400 )
+      +productListRoot-desktop( true , 'c-pseudoPhoto-68p c-pseudoPhoto--BaifanBowl', 'Baifan Bowl', 'NT$1,800', 'NT$1,980', 500 )
+      +productListRoot-desktop( false , 'c-pseudoPhoto-68p c-pseudoPhoto--LimdaeCup', 'Limdae Cup', 'NT$2,400', '', 600 )
+      +productListRoot-desktop( false , 'c-pseudoPhoto-100p c-pseudoPhoto--SumoVase', 'Sumo Vase', 'NT$4,800', '' , 700 )
+      +productListRoot-desktop( false , 'c-pseudoPhoto-137p c-pseudoPhoto--CeramicVase', 'Ceramic Vase', 'NT$3,600', '', 800 )
+      +productListRoot-desktop( false , 'c-pseudoPhoto-137p c-pseudoPhoto--KabiMug', 'Kabi Mug', 'NT$980', '', 900 )
+      +productListRoot-desktop( false , 'c-pseudoPhoto-68p c-pseudoPhoto--ShiroPlate', 'Shiro Plate', 'NT$1,200', '', 1000 )
+      +productListRoot-desktop( false , 'c-pseudoPhoto-100p c-pseudoPhoto--CoupleCollection', 'Couple Collection', 'NT$2,800', '', 1100 )
       // /mixin productListRoot(onSaleStatus, bgImgClassName, productListTitle, price, originPrice)
     // /ul.list-unstyled.row.js-masonry-productList
 
@@ -73,7 +73,7 @@ block mainInner
   section.container.d-lg-none.mb-0
     ul.list-unstyled.row.mx-n1.mb-3
       mixin productListRoot-mobile(onSaleStatus, bgImgClassName, productListTitle, price, originPrice)
-        li.w-50.px-1.mb-6
+        li.w-50.px-1.mb-6(data-aos='zoom-in')
           a.text-black.text-decoration-none(href="detail.html")
             .position-relative.c-pseudoPhoto.c-pseudoPhoto-100p.mb-2( class=bgImgClassName )
               if ( onSaleStatus == true )

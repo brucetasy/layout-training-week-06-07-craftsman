@@ -79,6 +79,14 @@
 
 /* base
 -------------------------------------------------- */
+::selection {
+	background: $primary;
+	color: $white;
+}
+input {
+  // 資料來源：https://developer.mozilla.org/zh-CN/docs/Web/CSS/caret-color
+  caret-color: $primary;
+}
 @import "base/logo";
 /* End of base
 -------------------------------------------------- */
