@@ -46,7 +46,7 @@
 - [AOS/Animate On Scroll Library 展示](https://michalsnik.github.io/aos/)
 - 透過 [Initialize AOS](https://github.com/michalsnik/aos#1-initialize-aos) 設定回彈 (`easing: 'ease-out-back'`) 與細部效果。
 - 首頁頁面依視覺區塊設定對應不同的動效。
-- 指定 `data-aos-anchor` 設定主從效果，透過感意主要區塊同時觸發跟從區塊的動效，透過 `data-aos-delay` 設定跟從出來的時差，型成局部區塊的出場動效。
+- 指定 `data-aos-anchor` 設定主從效果，透過感感主要區塊同時觸發跟從區塊的動效，跟從不同的區塊個別設定 `data-aos-delay` 出現的時差，型成局部區塊的出場動效。
 
 
 # 字符組
