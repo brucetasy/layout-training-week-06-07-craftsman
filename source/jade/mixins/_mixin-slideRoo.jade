@@ -1,7 +1,7 @@
 //- mixin slideRoot()
 //- 執行： +slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice)
-mixin slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice)
-  li.swiper-slide
+mixin slideRoot(onSaleStatus, bgImgClassName, slideRootTitle, price, originPrice, aosDelayTime)
+  li.swiper-slide(data-aos="zoom-in-up", data-aos-anchor-placement='top-bottom', data-aos-delay='#{aosDelayTime}')
     a.w-100.text-black.text-decoration-none(href="detail.html")
       .position-relative.c-pseudoPhoto.c-pseudoPhoto-100p.mb-2(class=bgImgClassName)
         if ( onSaleStatus == true )
