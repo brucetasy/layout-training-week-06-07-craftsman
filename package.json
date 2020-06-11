@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "aos": "^2.3.4",
     "autoprefixer": "^9.6.1",
     "bootstrap": "^4.3.1",
     "bower": "^1.8.8",
@@ -33,7 +34,6 @@
     "gulp-sequence": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "imagesloaded": "^4.1.4",
     "lodash": "^4.17.15",
     "main-bower-files": "^2.13.3",
     "masonry-layout": "^4.2.2",

@@ -23,6 +23,7 @@
 
 ## SCSS & Jade
 - 透過 Bootstrap 4 斷點 mixin (`@include` `media-breakpoint-up()` & `media-breakpoint-down()`)，直接取用整合到對應的斷點使用 ( `min-w` 與 `max-w` 為主 )。
+- Bootsrap 變數調整與客製元件。
 - 混合先前 jade 迴圈與判斷的部份，在導航列元件上做對應處理，整合到同一支檔中管理，例如： `_c-nav.jade` 檔中做相關頁面判斷對應的 HTML 結構與樣式。
 - SCSS 工具類樣式主要針對組合為主 (約七成)，若結構中有主附以元件為主來分類拆分管理。
 - jade 依 css className 與 HTML 結構區塊獨立重覆元件，透過 jade 函式與判斷式處理在頁面上對應的結構。
@@ -33,7 +34,7 @@
   - 浮動置頂導航列對應 desktop 斷點，主要分為三種 menu 的型態 (目前頁面、共用內頁、透明顯示視覺背景)
   - 側邊選單以 Bootsrap 的樣式為基底，透過 jQuery 操做動態的收閤樣式。
 - 使用 [masonry 插件](https://masonry.desandro.com/layout.html)
-  - 整合 Bootstrap 4 格線系統，有別於 Bootstrap 的瀑布流純 CSS 的排版，會由左上 > 左下 > 右上 > 右下 排序，這會收父層元素的高度影響，主要是以垂直排序為主，透過插件直接都由 左上 > 右上 > 下排內元件元素排序，內元件元素可依水平排序為主。
+  - 整合 Bootstrap 4 格線系統，有別於 Bootstrap 的瀑布流純 CSS 的排版，會由左上 > 左下 > 右上 > 右下 排序，這會受父層元素的高度影響，主要是以垂直排序為主，透過插件直接都由 左上 > 右上 > 下排內元件元素排序，內元件元素可依水平排序為主。
   - 整合偽元素自適應圖片的方式，在 `<img>` tag 戴入時套件需依賴 [imagesLoaded](https://imagesloaded.desandro.com/) 確任圖片戴入完成，`<img>` tag 後取得圖片高寬才可處理定位運算，而此方法因為透過 CSS 預先定好容圖的高度和寬度，不用透過 [imagesLoaded](https://imagesloaded.desandro.com/) 取得元素的高寬數值，直接可讓 JavaScript 做定為處理。
 - swiper [中文](https://www.swiper.com.cn/)、[英文](https://swiperjs.com/) (產品 slideShow 插件)
   - `.swiper-container` 的父層使用滿版寬度 ( `width: calc( 50vw - 50% + 100%);` ) 動態計算突出格線系統的寬度，視窗總寬的一半 - 容器寬度的一半 = 取得單邊容器的 `margin` 寬度 + 容器總寬度 - `scoll` 寬度 (不扣要使用 內元件最後一筆的 `margin-right` 推安全邊)。

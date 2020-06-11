@@ -25,8 +25,8 @@ var vendorJs = function(cd){
           './node_modules/swiper/js/swiper.js'
           ,
           './node_modules/masonry-layout/dist/masonry.pkgd.js'
-          // ,
-          // './node_modules/imagesloaded/imagesloaded.js'
+          ,
+          './node_modules/aos/dist/aos.js'
         ])
         .pipe($.order(['jquery.js']))
         .pipe($.concat('allVendors.js'))
