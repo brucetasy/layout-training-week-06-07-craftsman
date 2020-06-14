@@ -2,10 +2,15 @@ var gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync').create();
+// 圖片壓縮優化
+var mozjpeg = require('imagemin-mozjpeg');
+var optipng = require('imagemin-optipng');
+var imageminSvgo = require('imagemin-svgo');
+// /圖片壓縮優化
 
 var { options } = require('./options');
-var { bowerTask, vendorJs } = require('./vendor.js');
-console.log(bowerTask, vendorJs);
+var { vendorJs } = require('./vendor.js');
+console.log(vendorJs);
 
 console.log(options);
 // production || develop
@@ -55,7 +60,7 @@ gulp.task('sass', function () {
     }).on('error', $.sass.logError))
     // css 已編譯完成
     .pipe($.postcss(plugins))
-    .pipe($.if(options.env === 'production', $.minifyCss()))
+    // .pipe($.if(options.env === 'production', $.minifyCss()))
     // .pipe($.sourcemaps.write('.'))
     .pipe($.if(options.env !== 'production', $.sourcemaps.write('.')))
     .pipe(gulp.dest('./output/assets/css'))
@@ -98,7 +103,30 @@ gulp.task('clean', function () {
 gulp.task("imageMin", function(){
   return gulp
     .src("./source/assets/img/**")
-    .pipe($.if(options.env === "production", $.imagemin()))
+    .pipe($.if(options.env === "production", $.imagemin(
+      /** Gulp 圖片格式設定文件
+        ** 設定資料來源: https://awdr74100.github.io/2020-01-20-gulp-gulpimagemin/
+        ** gifsicle (GIF 圖片優化器): https://github.com/imagemin/imagemin-gifsicle
+        ** mozjpeg (JPEG 圖片優化器): https://github.com/imagemin/imagemin-mozjpeg
+        ** optipng (PNG 圖片優化器): https://github.com/imagemin/imagemin-optipng
+        ** svgo (SVG 圖片優化器): https://github.com/imagemin/imagemin-svgo
+      */
+      [
+        mozjpeg({
+          quality: 65, // 壓縮品質
+        }),
+        optipng({
+          optimizationLevel: 3, // 優化級別
+        }),
+        imageminSvgo({
+          plugins: [
+            { removeViewBox: true },
+            { cleanupIDs: false },
+            { removeDimensions: true } // 如果有 viewbox 則不需要 width 和 height 
+          ]
+        })
+      ]
+    )))
     .pipe(gulp.dest('./output/assets/img'))
 });
 
@@ -111,7 +139,6 @@ gulp.task('deploy', function() {
 gulp.task('build', 
   gulp.series(
     'clean',
-    bowerTask,
     vendorJs,
     'iconfont',
     gulp.parallel(
@@ -126,7 +153,6 @@ gulp.task('build',
 gulp.task('default', 
   gulp.series(
     'clean', 
-    bowerTask,
     vendorJs,
     'iconfont',
     gulp.parallel(
